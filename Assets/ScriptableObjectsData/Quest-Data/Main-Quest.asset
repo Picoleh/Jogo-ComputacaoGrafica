@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bc6c4ebb97b22647b6748c9a0ba2657, type: 3}
+  m_Name: Main-Quest
+  m_EditorClassIdentifier: 
+  description: Encontre os papeis para completar a senha!
+  questDialogue: {fileID: 11400000, guid: ee6576a8c51f57a4b82ca570251d332b, type: 2}
+  comebackInProgress: {fileID: 11400000, guid: cedec04f38ca11040b7b766bc842214d, type: 2}
+  comebackFinished: {fileID: 11400000, guid: ce9f974b295eaf342b01cf168c7aba55, type: 2}
+  itemReward: {fileID: 11400000, guid: e88bd441ced5f0245bab11309a8d1f29, type: 2}
