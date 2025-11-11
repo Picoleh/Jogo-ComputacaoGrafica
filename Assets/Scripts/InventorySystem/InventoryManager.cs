@@ -6,13 +6,15 @@ using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
-public class InventoryManager : MonoBehaviour
+public class InventoryManager : MonoBehaviour, ISaveable
 {
     public static InventoryManager instance;
 
     [SerializeField] private GameObject _invUI;
     [SerializeField] private TextMeshProUGUI descTitleRef;
     [SerializeField] private TextMeshProUGUI descriptionRef;
+    [SerializeField] private ItemDatabase _itemDatabase;
+    [SerializeField] private QuestDatabase _questDatabase;
     private List<InventorySlot> itensSlots;
     private List<QuestSlot> questSlots;
 
@@ -24,6 +26,7 @@ public class InventoryManager : MonoBehaviour
             return;
         }
         instance = this;
+        SaveManager.instance.RegisterInventory(this);
         //isOpen = false;
         _invUI.SetActive(false);
 
@@ -83,24 +86,24 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-    public void AddQuest(Quest quest, string ownerName) {
+    public void AddQuest(QuestInfo quest) {
         foreach(var slot in questSlots) {
             if (slot.IsEmpty) { 
-                slot.SetQuest(quest, ownerName);
+                slot.SetQuest(quest);
                 NotificationManager.instance.ShowNotification("Nova Quest:\nAperte TAB para ver");
                 return;
             }
         }
     }
 
-    public void RemoveQuest(Quest quest) {
+    public void RemoveQuest(QuestInfo quest) {
         for (int i = 0; i < questSlots.Count; i++) {
             if (questSlots[i].getQuest() == quest) {
                 questSlots[i].ClearSlot();
                 for (int j = i + 1; j < questSlots.Count; j++) {
                     if (questSlots[j].getQuest() == null)
                         break;
-                    questSlots[j - 1].SetQuest(questSlots[j].getQuest(), questSlots[j].getOwnerName());
+                    questSlots[j - 1].SetQuest(questSlots[j].getQuest());
                     questSlots[j].ClearSlot();
                 }
                 break;
@@ -125,5 +128,30 @@ public class InventoryManager : MonoBehaviour
         InputMapManager.instance.EnableMap("Gameplay");
         _invUI.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    public object GetData() {
+        List<string> itensNames = new List<string>();
+        List<int> questsIds = new List<int>();
+        foreach (var slot in itensSlots) { 
+            if(!slot.IsEmpty)
+                itensNames.Add(slot.getItem().itemName);
+        }
+        foreach(var slot in questSlots) {
+            if (!slot.IsEmpty)
+                questsIds.Add(slot.getQuest().id);
+        }
+        return new InventoryData(itensNames, questsIds);
+    }
+
+    public void SetData(object data) {
+        InventoryData invData = (InventoryData)data;
+        foreach (var item in invData.itens) {
+            AddItem(_itemDatabase.GetItemByName(item));
+        }
+
+        foreach(var questId in invData.quests) {
+            AddQuest(_questDatabase.GetQuestById(questId));
+        }
     }
 }

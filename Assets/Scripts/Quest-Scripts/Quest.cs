@@ -37,4 +37,8 @@ public class Quest{
     public string getQuestDescription() {
         return info.description;
     }
+
+    public int getQuestId() {
+        return info.id;
+    }
 }

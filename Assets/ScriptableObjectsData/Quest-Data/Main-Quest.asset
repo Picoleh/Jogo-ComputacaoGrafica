@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bc6c4ebb97b22647b6748c9a0ba2657, type: 3}
   m_Name: Main-Quest
   m_EditorClassIdentifier: 
+  id: 0
+  questTitle: Onde foi que eu deixei?
   description: Encontre os papeis para completar a senha!
   questDialogue: {fileID: 11400000, guid: ee6576a8c51f57a4b82ca570251d332b, type: 2}
   comebackInProgress: {fileID: 11400000, guid: cedec04f38ca11040b7b766bc842214d, type: 2}

@@ -1,8 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerMovement : MonoBehaviour
-{
+public class PlayerMovement : MonoBehaviour, ISaveable{
     [SerializeField] private CharacterController controller;
     [SerializeField] private Animator animator;
     [SerializeField] private float moveSpeed = 6.0f;
@@ -14,6 +13,11 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private InputActionReference move;
     [SerializeField] private bool isSprinting;
+
+
+    private void Awake() {
+        SaveManager.instance.RegisterPlayer(this);
+    }
 
     private void Start() {
         Cursor.lockState = CursorLockMode.Locked;
@@ -73,5 +77,33 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    public void OnOpenMenu(InputAction.CallbackContext context) {
+        if (context.performed) {
+            PauseMenuManager.instance.OpenMenu();
+        }
+    }
 
+    public object GetData() {
+        return new PlayerData(
+            new float[] {
+                transform.position.x,
+                transform.position.y,
+                transform.position.z
+            },
+            transform.eulerAngles.y
+        );
+    }
+
+    public void SetData(object data) {
+        controller.enabled = false;
+        PlayerData playerData = (PlayerData)data;
+        
+        transform.SetPositionAndRotation(new Vector3(
+                playerData.position[0],
+                playerData.position[1],
+                playerData.position[2]
+            ), Quaternion.Euler(0, playerData.rotationY, 0));
+
+        controller.enabled = true;
+    }
 }

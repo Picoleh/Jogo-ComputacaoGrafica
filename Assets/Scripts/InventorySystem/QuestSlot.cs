@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class QuestSlot : SlotSelectableUI{
     [SerializeField] private TextMeshProUGUI _questOwnerText;
     [SerializeField] private TextMeshProUGUI _questTitleText;
-    private Quest _quest;
+    private QuestInfo _quest;
     private string _ownerName;
 
     public bool IsEmpty => _quest == null;
@@ -15,13 +15,13 @@ public class QuestSlot : SlotSelectableUI{
         highlightImage.enabled = false;
     }
 
-    public void SetQuest(Quest quest, string ownerName) {
+    public void SetQuest(QuestInfo quest) {
         _quest = quest;
-        _ownerName = ownerName;
-        _questTitleText.text = quest.getQuestTitle();
-        _questOwnerText.text = ownerName;
+        _ownerName = quest.getOwnerName();
+        _questTitleText.text = quest.questTitle;
+        _questOwnerText.text = quest.getOwnerName();
 
-        SetUIInfo(quest.getQuestTitle(), quest.getQuestDescription());
+        SetUIInfo(quest.questTitle, quest.description);
         //_descriptionText = quest.getQuestDescription();
         //_titleText = quest.getQuestTitle();
     }
@@ -31,7 +31,7 @@ public class QuestSlot : SlotSelectableUI{
         _ownerName = null;
     }
 
-    public Quest getQuest() {
+    public QuestInfo getQuest() {
         return _quest;
     }
 
