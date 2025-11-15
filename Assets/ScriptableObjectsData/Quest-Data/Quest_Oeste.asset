@@ -9,13 +9,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bc6c4ebb97b22647b6748c9a0ba2657, type: 3}
-  m_Name: Main-Quest
+  m_Script: {fileID: 11500000, guid: 622d4f87393e5954999b8b9b0beeb32b, type: 3}
+  m_Name: Quest_Oeste
   m_EditorClassIdentifier: 
   id: 0
-  questTitle: Onde foi que eu deixei?
-  description: Encontre os papeis para completar a senha!
+  questTitle: where did i leave it?
+  description: ooo meu fi kd
   questDialogue: {fileID: 11400000, guid: ee6576a8c51f57a4b82ca570251d332b, type: 2}
   comebackInProgress: {fileID: 11400000, guid: cedec04f38ca11040b7b766bc842214d, type: 2}
   comebackFinished: {fileID: 11400000, guid: ce9f974b295eaf342b01cf168c7aba55, type: 2}
   itemReward: {fileID: 11400000, guid: e88bd441ced5f0245bab11309a8d1f29, type: 2}
+  _itensToCollect:
+  - {fileID: 11400000, guid: 459731e0979ab8a4f86a5d5f423e7ccc, type: 2}
+  prefabs:
+  - {fileID: 3997356625107108819, guid: 6fad4a7bac59ab34f937dbe729b621d3, type: 3}
+  - {fileID: 3997356625107108819, guid: 6fad4a7bac59ab34f937dbe729b621d3, type: 3}
+  positions:
+  - {x: 92.9, y: 0.65707, z: 337.86}
+  - {x: 113.6, y: 0.65707, z: 337.86}

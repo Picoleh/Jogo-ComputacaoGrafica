@@ -36,6 +36,7 @@ public class Interactor : MonoBehaviour{
     public void OnInteract(InputAction.CallbackContext context) {
         if (context.performed) {
             if (_numFound > 0) {
+                SoundManager.instance.PlaySFX("SomRobo4");
                 var interactable = colliders[0].GetComponent<IInteractable>();
                 if (interactable != null) {
                     if (interactable is NPC) {

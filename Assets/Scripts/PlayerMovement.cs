@@ -44,8 +44,17 @@ public class PlayerMovement : MonoBehaviour, ISaveable{
         horizontalMove = horizontalMove * speed;
         animator.SetFloat("Speed", horizontalMove.magnitude);
 
+        if(horizontalMove.magnitude > 10.0f) {
+            SoundManager.instance.PlayLoop("RoboCorrendo");
+        }
+        else if(horizontalMove.magnitude > 5.0f) {
+            SoundManager.instance.PlayLoop("RoboAndando");
+        }
+        else {
+            SoundManager.instance.StopLoop();
+        }
 
-        velocity = new Vector3(horizontalMove.x, velocity.y, horizontalMove.z);
+            velocity = new Vector3(horizontalMove.x, velocity.y, horizontalMove.z);
 
         velocity.y += Physics.gravity.y * Time.deltaTime;
 

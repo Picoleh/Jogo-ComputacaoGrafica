@@ -86,7 +86,7 @@ public class InventoryManager : MonoBehaviour, ISaveable
         }
     }
 
-    public void AddQuest(QuestInfo quest) {
+    public void AddQuest(QuestBase quest) {
         foreach(var slot in questSlots) {
             if (slot.IsEmpty) { 
                 slot.SetQuest(quest);
@@ -96,7 +96,7 @@ public class InventoryManager : MonoBehaviour, ISaveable
         }
     }
 
-    public void RemoveQuest(QuestInfo quest) {
+    public void RemoveQuest(QuestBase quest) {
         for (int i = 0; i < questSlots.Count; i++) {
             if (questSlots[i].getQuest() == quest) {
                 questSlots[i].ClearSlot();
@@ -137,11 +137,11 @@ public class InventoryManager : MonoBehaviour, ISaveable
             if(!slot.IsEmpty)
                 itensNames.Add(slot.getItem().itemName);
         }
-        foreach(var slot in questSlots) {
-            if (!slot.IsEmpty)
-                questsIds.Add(slot.getQuest().id);
-        }
-        return new InventoryData(itensNames, questsIds);
+        //foreach(var slot in questSlots) {
+        //    if (!slot.IsEmpty)
+        //        questsIds.Add(slot.getQuest().id);
+        //}
+        return new InventoryData(itensNames);
     }
 
     public void SetData(object data) {
@@ -150,8 +150,25 @@ public class InventoryManager : MonoBehaviour, ISaveable
             AddItem(_itemDatabase.GetItemByName(item));
         }
 
-        foreach(var questId in invData.quests) {
-            AddQuest(_questDatabase.GetQuestById(questId));
+        //foreach (var questId in invData.quests) {
+        //    AddQuest(_questDatabase.GetQuestById(questId));
+        //}
+    }
+
+    public bool HasItens(List<ItemInfo> itensToTest) {
+        foreach (var item in itensToTest) { 
+            if(!HasItem(item)) 
+                return false;
         }
+        return true;
+    }
+
+    public bool HasItem(ItemInfo itemToTest) {
+        foreach (var slot in itensSlots) {
+            if(!slot.IsEmpty)
+                if(slot.getItem() == itemToTest)
+                    return true;
+        }
+        return false;
     }
 }

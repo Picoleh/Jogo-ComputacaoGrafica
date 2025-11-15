@@ -4,10 +4,9 @@ using UnityEngine;
 public class NPC : MonoBehaviour, IInteractable, ISaveable{
     [SerializeField] private string _npcName;
     [SerializeField] private string _prompt;
-    [SerializeField] private QuestInfo _quest;
+    [SerializeField] private QuestBase _quest;
     [SerializeField] private Animator _animator; 
     private bool _firstInteraction = true;
-    private bool _receivedReward = false;
 
     public string interactionPrompt => _prompt;
 
@@ -23,17 +22,19 @@ public class NPC : MonoBehaviour, IInteractable, ISaveable{
         if (_firstInteraction) { 
             DialogueSystem.instance.StartDialogue(_npcName, _quest.questDialogue);
             _firstInteraction = false;
-            DialogueSystem.instance.OnDialogueEnd += ShowMissionNotification;
+            //DialogueSystem.instance.OnDialogueEnd += ShowMissionNotification;
+            if(_quest != null)
+                _quest.StartQuest();
         }
         else {
             DialogueSystem.instance.StartDialogue(_npcName, _quest.getCombackDialog());
-            if (_quest.isCompleted() && !_receivedReward) {
-                DialogueSystem.instance.OnDialogueEnd += GiveReward;
-                _receivedReward = true;
-            }
-            else {
-                InventoryManager.instance.RemoveItem(_quest.getReward());
-            }
+            //if (_quest.isCompleted() && !_receivedReward) {
+            //    DialogueSystem.instance.OnDialogueEnd += GiveReward;
+            //    _receivedReward = true;
+            //}
+            //else {
+            //    InventoryManager.instance.RemoveItem(_quest.getReward());
+            //}
         }
 
     }
@@ -50,13 +51,16 @@ public class NPC : MonoBehaviour, IInteractable, ISaveable{
     }
 
     public object GetData() {
-        return new NPCData(_firstInteraction, _receivedReward);
+        return new NPCData(_firstInteraction, _quest._completed);
     }
 
     public void SetData(object data) {
         NPCData nPCData = (NPCData)data;
 
         _firstInteraction = nPCData.firstInteraction;
-        _receivedReward = nPCData.receivedReward;
+
+        if (!_firstInteraction && !_quest._completed) { 
+            _quest.RedoQuest();
+        }
     }
 }
