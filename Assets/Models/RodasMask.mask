@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: RodasMask
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: Armature
+    m_Weight: 0
+  - m_Path: Armature/Root
+    m_Weight: 0
+  - m_Path: Armature/Root/UpperArm.L
+    m_Weight: 0
+  - m_Path: Armature/Root/UpperArm.L/UpperArm.L.001
+    m_Weight: 0
+  - m_Path: Armature/Root/UpperArm.L/UpperArm.L.001/UpperArm.L.1
+    m_Weight: 0
+  - m_Path: Armature/Root/UpperArm.L/UpperArm.L.001/UpperArm.L.1/UpperArm.L.002
+    m_Weight: 0
+  - m_Path: Armature/Root/UpperArm.L/UpperArm.L.001/UpperArm.L.1/UpperArm.L.002/UpperArm.L.003
+    m_Weight: 0
+  - m_Path: Armature/Root/UpperArm.L/UpperArm.L.001/UpperArm.L.1/UpperArm.L.002/UpperArm.L.003/UpperArm.L.004
+    m_Weight: 0
+  - m_Path: Armature/Root/UpperArm.L/UpperArm.L.001/UpperArm.L.1/UpperArm.L.002/UpperArm.L.003/UpperArm.L.004/UpperArm.L.005
+    m_Weight: 0
+  - m_Path: Armature/Root/UpperArm.L/UpperArm.L.001/UpperArm.L.1/UpperArm.L.002/UpperArm.L.003/UpperArm.L.004/UpperArm.L.005/UpperArm.L.006
+    m_Weight: 0
+  - m_Path: Armature/Root/UpperArm.L/UpperArm.L.001/UpperArm.L.1/UpperArm.L.002/UpperArm.L.003/UpperArm.L.004/UpperArm.L.005/UpperArm.L.006/UpperArm.L.007
+    m_Weight: 0
+  - m_Path: Armature/Root/UpperArm.L/UpperArm.L.001/UpperArm.L.1/UpperArm.L.002/UpperArm.L.003/UpperArm.L.004/UpperArm.L.005/UpperArm.L.006/UpperArm.L.007/UpperArm.L.008
+    m_Weight: 0
+  - m_Path: Armature/Root/UpperArm.L/UpperArm.L.001/UpperArm.L.1/UpperArm.L.002/UpperArm.L.003/UpperArm.L.004/UpperArm.L.005/UpperArm.L.006/UpperArm.L.007/UpperArm.L.008/UpperArm.L.009
+    m_Weight: 0
+  - m_Path: Armature/Root/UpperArm.L/UpperArm.L.001/UpperArm.L.1/UpperArm.L.002/UpperArm.L.003/UpperArm.L.004/UpperArm.L.005/UpperArm.L.006/UpperArm.L.007/UpperArm.L.008/UpperArm.L.009/Garra
+      Esq
+    m_Weight: 0
+  - m_Path: Armature/Root/UpperArm.R
+    m_Weight: 0
+  - m_Path: Armature/Root/UpperArm.R/UpperArm.R.001
+    m_Weight: 0
+  - m_Path: Armature/Root/UpperArm.R/UpperArm.R.001/UpperArm.R.004
+    m_Weight: 0
+  - m_Path: Armature/Root/UpperArm.R/UpperArm.R.001/UpperArm.R.004/UpperArm.R.005
+    m_Weight: 0
+  - m_Path: Armature/Root/UpperArm.R/UpperArm.R.001/UpperArm.R.004/UpperArm.R.005/UpperArm.R.006
+    m_Weight: 0
+  - m_Path: Armature/Root/UpperArm.R/UpperArm.R.001/UpperArm.R.004/UpperArm.R.005/UpperArm.R.006/UpperArm.R.007
+    m_Weight: 0
+  - m_Path: Armature/Root/UpperArm.R/UpperArm.R.001/UpperArm.R.004/UpperArm.R.005/UpperArm.R.006/UpperArm.R.007/UpperArm.R.008
+    m_Weight: 0
+  - m_Path: Armature/Root/UpperArm.R/UpperArm.R.001/UpperArm.R.004/UpperArm.R.005/UpperArm.R.006/UpperArm.R.007/UpperArm.R.008/UpperArm.R.009
+    m_Weight: 0
+  - m_Path: Armature/Root/UpperArm.R/UpperArm.R.001/UpperArm.R.004/UpperArm.R.005/UpperArm.R.006/UpperArm.R.007/UpperArm.R.008/UpperArm.R.009/UpperArm.R.010
+    m_Weight: 0
+  - m_Path: Armature/Root/UpperArm.R/UpperArm.R.001/UpperArm.R.004/UpperArm.R.005/UpperArm.R.006/UpperArm.R.007/UpperArm.R.008/UpperArm.R.009/UpperArm.R.010/UpperArm.R.011
+    m_Weight: 0
+  - m_Path: Armature/Root/UpperArm.R/UpperArm.R.001/UpperArm.R.004/UpperArm.R.005/UpperArm.R.006/UpperArm.R.007/UpperArm.R.008/UpperArm.R.009/UpperArm.R.010/UpperArm.R.011/UpperArm.R.012
+    m_Weight: 0
+  - m_Path: Armature/Root/UpperArm.R/UpperArm.R.001/UpperArm.R.004/UpperArm.R.005/UpperArm.R.006/UpperArm.R.007/UpperArm.R.008/UpperArm.R.009/UpperArm.R.010/UpperArm.R.011/UpperArm.R.012/Garra
+      Dir
+    m_Weight: 0
+  - m_Path: Corpo
+    m_Weight: 0
+  - m_Path: Corpo/Base
+    m_Weight: 0
+  - m_Path: Corpo/Base/Eixo Roda
+    m_Weight: 0
+  - m_Path: Corpo/Base/Eixo Roda/Roda
+    m_Weight: 1
+  - m_Path: Corpo/Ombro
+    m_Weight: 0
+  - m_Path: Corpo/Painel
+    m_Weight: 0
+  - m_Path: Corpo/Painel/Parafusos
+    m_Weight: 0
+  - m_Path: Corpo/Placa Costas
+    m_Weight: 0
+  - m_Path: Corpo/Saida Planta
+    m_Weight: 0
+  - m_Path: Corpo/Saida Planta/Caule
+    m_Weight: 0
+  - m_Path: Corpo/Saida Planta/Caule/Folha 1
+    m_Weight: 0
+  - m_Path: Corpo/Saida Planta/Caule/Folha 2
+    m_Weight: 0
+  - m_Path: Corpo/Visor
+    m_Weight: 0
+  - m_Path: Corpo/Visor/Olho
+    m_Weight: 0
+  - m_Path: Cylinder.002
+    m_Weight: 0
+  - m_Path: Cylinder.003
+    m_Weight: 0
