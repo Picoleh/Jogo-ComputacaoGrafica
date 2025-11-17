@@ -1,0 +1,8 @@
+using UnityEngine;
+
+[CreateAssetMenu(fileName = "ItemInfo", menuName = "Scriptable Objects/ItemInfo")]
+public class ItemInfo : ScriptableObject{
+    public string itemName;
+    public string itemDescription;
+    public Sprite icon;
+}

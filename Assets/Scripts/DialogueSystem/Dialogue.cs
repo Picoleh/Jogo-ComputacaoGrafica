@@ -1,0 +1,9 @@
+using System.Collections.Generic;
+using UnityEngine;
+
+[CreateAssetMenu(menuName = "Dialogue/Linear Dialogue")]
+public class Dialogue: ScriptableObject{
+
+    public List<DialogueLine> lines;
+
+}

@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27b59d6df643df945a2fc0657b743ff4, type: 3}
+  m_Name: Quest_Sul
+  m_EditorClassIdentifier: 
+  _completed: 0
+  id: 1
+  questTitle: Turturafa
+  description: planta as badnmdeira
+  questDialogue: {fileID: 11400000, guid: 7ecb1fb992e17054fba6209d24069f47, type: 2}
+  comebackInProgress: {fileID: 11400000, guid: e89cb7c9ec921b74ba7bb0653411eaeb, type: 2}
+  comebackFinished: {fileID: 11400000, guid: 9a2767902115fad458d2973260516956, type: 2}
+  itemReward: {fileID: 11400000, guid: e88bd441ced5f0245bab11309a8d1f29, type: 2}
+  promptOnTarget: Bande
+  messageInteractedTarget: Bandeira colocada
+  spawnAtTarget: {fileID: 1338853173686501506, guid: 81bcf1fffb8d02e4b9200e6c633d206d, type: 3}
+  prefabsTarget:
+  - {fileID: 4351518172069271264, guid: 7655f233ab564e04c9918a5e8eb72d00, type: 3}
+  - {fileID: 4351518172069271264, guid: 7655f233ab564e04c9918a5e8eb72d00, type: 3}
+  positions:
+  - {x: -280.434, y: 5.61, z: 27.297}
+  - {x: -270.7, y: 5.61, z: 27.297}
