@@ -10,12 +10,14 @@ public class PlayerMovement : MonoBehaviour, ISaveable{
     [SerializeField] private float maxSprintSpeed = 12.0f;
     [SerializeField] private float rotationSpeed = 90f;
     [SerializeField] private GameObject inventoryUI;
+    [SerializeField] private Interactor interactorScript;
     private Vector3 horizontalVelocity;
     private float verticalVelocity;
     private float rotateInput;
 
     [SerializeField] private InputActionReference move;
     [SerializeField] private bool isSprinting;
+    [SerializeField] private InputActionAsset inputActions;
 
 
     private void Awake() {
@@ -30,7 +32,7 @@ public class PlayerMovement : MonoBehaviour, ISaveable{
     }
 
     void Update(){
-
+        //Debug.Log(inputActions.FindActionMap("Gameplay").enabled);
         if (Mathf.Abs(rotateInput) > 0.01f) { // Testa se há input de rotação
             // Aplica penalização se estiver correndo
             float rotationPenalty = isSprinting ? 0.4f : 1.0f; 
@@ -97,7 +99,7 @@ public class PlayerMovement : MonoBehaviour, ISaveable{
         controller.Move(finalVelocity * Time.deltaTime);
     }
 
-    public void OnSprint(InputAction.CallbackContext context) {
+    public void Sprint(InputAction.CallbackContext context) {
         if (context.performed && horizontalVelocity.magnitude > 0) {
             isSprinting = true;
         }
@@ -106,27 +108,35 @@ public class PlayerMovement : MonoBehaviour, ISaveable{
         }
     }
 
-    public void OnRotate(InputAction.CallbackContext context) {
-            rotateInput = context.ReadValue<float>();
+    //public void OnRotate(InputAction.CallbackContext context) {
+    //    rotateInput = context.ReadValue<float>();
+    //}
+
+    public void Rotate(float value) {
+        rotateInput = value;
     }
 
-    public void OnOpenInventory(InputAction.CallbackContext context) {
-        if (context.performed){
-            InventoryManager.instance.OpenInventory();
-        }
+    //public void OnOpenInventory(InputAction.CallbackContext context) {
+    //    if (context.performed){
+    //        InventoryManager.instance.OpenInventory();
+    //    }
+    //}
+
+    public void Interact() {
+        interactorScript.OnInteract();
     }
 
-    public void OnNextSentence(InputAction.CallbackContext context) {
-        if (context.performed) {
-            DialogueSystem.instance.DisplayNextSentence();
-        }
-    }
+    //public void OnNextSentence(InputAction.CallbackContext context) {
+    //    if (context.performed) {
+    //        DialogueSystem.instance.DisplayNextSentence();
+    //    }
+    //}
 
-    public void OnOpenPauseMenu(InputAction.CallbackContext context) {
-        if (context.performed) {
-            PauseMenuManager.instance.OpenMenu();
-        }
-    }
+    //public void OnOpenPauseMenu(InputAction.CallbackContext context) {
+    //    if (context.performed) {
+    //        MenuManager.instance.OpenMenu(MenuType.Pause);
+    //    }
+    //}
 
     public object GetData() {
         return new PlayerData(

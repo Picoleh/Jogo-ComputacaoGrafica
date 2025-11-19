@@ -4,13 +4,11 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class SettingsMenu : MonoBehaviour, ISaveable
+public class SettingsMenu : MenuBase, ISaveable
 {
     [SerializeField] Slider musicVolumeSlider;
 
     private void Awake() {
-        SaveManager.instance.LoadConfigData();
-        UpdateSoundManager();
     }
 
     public void SaveConfig() {
@@ -25,6 +23,7 @@ public class SettingsMenu : MonoBehaviour, ISaveable
         VolumesData volumesData = (VolumesData)data;
 
         musicVolumeSlider.value = volumesData.musicVolume;
+        UpdateSoundManager();
     }
 
     public void UpdateSoundManager() {

@@ -33,19 +33,17 @@ public class Interactor : MonoBehaviour{
     //    Gizmos.DrawWireSphere(_interactionPoint.position, _interactionPointRadius);
     //}
 
-    public void OnInteract(InputAction.CallbackContext context) {
-        if (context.performed) {
-            if (_numFound > 0) {
-                SoundManager.instance.PlaySFX("SomRobo4");
-                var interactable = colliders[0].GetComponent<IInteractable>();
-                if (interactable != null) {
-                    if (interactable is NPC) {
-                    }
-                    else if(interactable is Item) {
-                        animator.SetTrigger("Interact");
-                    }
-                        interactable.Interact(this);
+    public void OnInteract() {
+        if (_numFound > 0) {
+            SoundManager.instance.PlaySFX("SomRobo4");
+            var interactable = colliders[0].GetComponent<IInteractable>();
+            if (interactable != null) {
+                if (interactable is NPC) {
                 }
+                else if(interactable is Item) {
+                    animator.SetTrigger("Interact");
+                }
+                    interactable.Interact(this);
             }
         }
     }

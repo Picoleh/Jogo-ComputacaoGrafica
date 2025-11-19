@@ -2,17 +2,28 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-public class MainMenu : MonoBehaviour
+public class MainMenu : MenuBase
 {
+    [SerializeField] Button settingsButton;
+
+    private void Awake() {
+        settingsButton.onClick.AddListener(OnSettingsClick);
+    }
+
     public void OnNewGame() {
+        MenuManager.instance.CloseMenu();
         SaveManager.instance.ChangeScenes(newSave:true);
-        gameObject.SetActive(false);
     }
 
     public void OnLoadGame() {
+        MenuManager.instance.CloseMenu();
         SaveManager.instance.ChangeScenes(newSave:false);
-        gameObject.SetActive(false);
+    }
+
+    private void OnSettingsClick() {
+        MenuManager.instance.OpenMenu(MenuType.Settings);
     }
 
     public void OnExit() {

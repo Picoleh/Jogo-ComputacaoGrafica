@@ -288,11 +288,22 @@
                     "action": "CloseInventory",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "553b7f31-7421-4945-9c63-0f88311a58d4",
+                    "path": "<Keyboard>/i",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CloseInventory",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
         {
-            "name": "PauseMenu",
+            "name": "Menu",
             "id": "57548ab4-56b7-4727-8f7a-a46e1e3b262f",
             "actions": [
                 {

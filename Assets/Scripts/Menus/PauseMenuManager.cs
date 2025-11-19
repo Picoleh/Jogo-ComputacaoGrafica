@@ -1,32 +1,36 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-public class PauseMenuManager : MonoBehaviour{
+public class PauseMenuManager : MenuBase
+{
     public static PauseMenuManager instance;
-
+    [SerializeField] Button settingsButton;
+    [SerializeField] Button mainMenuButton;
     private void Awake() {
         if (instance != null && instance != this) {
             Destroy(gameObject);
             return;
         }
         instance = this;
-        gameObject.SetActive(false);
-    }
-
-
-    public void OpenMenu() {
-        InputMapManager.instance.EnableMap("PauseMenu");
-        Cursor.lockState = CursorLockMode.None;
-        gameObject.SetActive(true);
+        settingsButton.onClick.AddListener(OnSettingsClick);
+        mainMenuButton.onClick.AddListener(OnMainMenuClick);
     }
 
     public void OnCloseMenu(InputAction.CallbackContext context) {
         if (context.performed) {
-            InputMapManager.instance.EnableMap("Gameplay");
-            gameObject.SetActive(false);
-            Cursor.lockState = CursorLockMode.Locked;
+            
         }
+    }
+
+    private void OnSettingsClick() {
+        MenuManager.instance.OpenMenu(MenuType.Settings);
+    }
+
+    private void OnMainMenuClick() {
+        SceneManager.LoadScene("MainMenu");
+        MenuManager.instance.OpenMenu(MenuType.Main);
     }
 
     public void OnSave() {

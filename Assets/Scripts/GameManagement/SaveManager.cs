@@ -12,7 +12,6 @@ public class SaveManager : MonoBehaviour{
     private PlayerMovement player;
     private InventoryManager inventory;
     [SerializeField] private SettingsMenu settingsMenu;
-    [SerializeField] private GameObject allMenus;
     private List<NPC> npcs = new();
 
     private void Awake() {
@@ -23,7 +22,6 @@ public class SaveManager : MonoBehaviour{
         instance = this;
         loadSave = false;
         DontDestroyOnLoad(gameObject);
-        DontDestroyOnLoad(allMenus);
     }
 
     public void RegisterPlayer(PlayerMovement p) {
@@ -119,5 +117,6 @@ public class SaveManager : MonoBehaviour{
             LoadGameData();
         }
         SceneManager.sceneLoaded -= OnSceneLoaded;
+        InputMapManager.instance.GetInputReferences();
     }
 }

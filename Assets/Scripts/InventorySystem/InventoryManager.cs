@@ -130,7 +130,7 @@ public class InventoryManager : MonoBehaviour, ISaveable
         }
     }
 
-    public void OnCloseInventory(InputAction.CallbackContext context) {
+    public void OnCloseInventory() {
         InputMapManager.instance.EnableMap("Gameplay");
         _invUI.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
