@@ -79,8 +79,7 @@ public class SaveManager : MonoBehaviour{
 
     private IEnumerator LoadGameRoutine() {
         // 1️ Mostrar tela de loading
-        //if (loadingScreen != null)
-            //loadingScreen.SetActive(true);
+        LoadingScript.instance.ShowLoadScreen();
 
         // 2 Começar carregamento da cena
         AsyncOperation async = SceneManager.LoadSceneAsync("Game");
@@ -93,11 +92,13 @@ public class SaveManager : MonoBehaviour{
         //    yield return null;
         //}
 
-        // 4️(opcional) tempo mínimo de loading
         while (async.progress < 0.9f) {
             yield return null;
         }
-        //yield return new WaitForSeconds(1f);
+        
+        // 4️(opcional) tempo mínimo de loading
+        yield return new WaitForSeconds(5f);
+
 
         // 6️ Ativar a nova cena
         async.allowSceneActivation = true;
@@ -105,7 +106,6 @@ public class SaveManager : MonoBehaviour{
         SceneManager.sceneLoaded += OnSceneLoaded;
 
         // 5️ Restaurar dados (antes de ativar a cena)
-        
 
         // 7️ Esconder tela de loading
         //if (loadingScreen != null)
@@ -118,5 +118,6 @@ public class SaveManager : MonoBehaviour{
         }
         SceneManager.sceneLoaded -= OnSceneLoaded;
         InputMapManager.instance.GetInputReferences();
+        LoadingScript.instance.HideLoadScreen();
     }
 }
