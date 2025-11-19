@@ -1,9 +1,15 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 
 public class SoundManager : MonoBehaviour
 {
+    [Header("Configs")]
+    [SerializeField] private float fadeTime = 10f;
+    private float musicVolume = 0.6f;
+    private float ambientVolume = 0.6f;
+
     [Header("Sources")]
     [SerializeField] private AudioSource sfxSource;
     [SerializeField] private AudioSource loopSource;
@@ -18,7 +24,7 @@ public class SoundManager : MonoBehaviour
 
     private AudioClip lastMusic;
     private AudioClip lastAmbient;
-    private bool musicTurn;
+    private bool isFading;
     public static SoundManager instance;
 
     private void Awake() {
@@ -29,19 +35,34 @@ public class SoundManager : MonoBehaviour
         instance = this;
         lastMusic = null;
         lastAmbient = null;
-        musicTurn = false;
+        isFading = false;
+    }
+
+    private void Start() {
+        PlayMusic();
+        musicSource.volume = 0;
+        StartCoroutine(FadeIn(musicSource, musicVolume));
     }
 
     private void Update() {
-        if (!musicSource.isPlaying && !ambientSource.isPlaying) {
-            if (musicTurn) {
-                PlayMusic();
+        if (musicSource.isPlaying) {
+            if (Mathf.RoundToInt(musicSource.clip.length) - Mathf.RoundToInt(musicSource.time) < fadeTime) {
+                if (!isFading) {
+                    StartCoroutine(FadeOut(musicSource));
+                    PlayAmbientSound();
+                    StartCoroutine(FadeIn(ambientSource, ambientVolume));
+                }
             }
-            else {
-                PlayAmbientSound();
-            }
-            musicTurn = !musicTurn;
         }
+        if (ambientSource.isPlaying) {
+            if (Mathf.RoundToInt(ambientSource.clip.length) - Mathf.RoundToInt(ambientSource.time) < fadeTime) {
+                if (!isFading) {
+                    StartCoroutine(FadeOut(ambientSource));
+                    PlayMusic();
+                    StartCoroutine(FadeIn(musicSource, musicVolume));
+                }
+            }
+        }   
     }
 
     private void PlayAmbientSound() {
@@ -96,5 +117,40 @@ public class SoundManager : MonoBehaviour
                 return clip;
         }
         return null;
+    }
+
+    IEnumerator FadeOut(AudioSource source) {
+        isFading = true;
+        Debug.Log("FadeOut: " + source.name);
+        float startVolume = source.volume;
+        float t = 0f;
+
+        while (t < fadeTime) {
+            t += Time.deltaTime;
+            source.volume = Mathf.Lerp(startVolume, 0f, t / fadeTime);
+            yield return null;
+        }
+
+        source.volume = 0f;
+        source.Stop();
+
+        isFading = false;
+    }
+
+    IEnumerator FadeIn(AudioSource source, float volumeTarget) {
+        isFading = true;
+        Debug.Log("FadeIn: " + source.name);
+        float startVolume = source.volume;
+        float t = 0f;
+
+        while (t < fadeTime) {
+            t += Time.deltaTime;
+            source.volume = Mathf.Lerp(0f, volumeTarget, t / fadeTime);
+            yield return null;
+        }
+
+        source.volume = volumeTarget;
+
+        isFading = false;
     }
 }

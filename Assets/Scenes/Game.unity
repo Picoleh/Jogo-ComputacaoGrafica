@@ -10526,6 +10526,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9de75fedc7871e9418c55d555c76cc33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fadeOutTime: 5
   sfxSource: {fileID: 377915193}
   loopSource: {fileID: 1555223075}
   musicSource: {fileID: 1685650916}
