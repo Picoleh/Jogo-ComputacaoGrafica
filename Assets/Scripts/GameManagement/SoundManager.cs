@@ -7,8 +7,6 @@ public class SoundManager : MonoBehaviour
 {
     [Header("Configs")]
     [SerializeField] private float fadeTime = 10f;
-    private float musicVolume = 0.6f;
-    private float ambientVolume = 0.6f;
 
     [Header("Sources")]
     [SerializeField] private AudioSource sfxSource;
@@ -25,6 +23,9 @@ public class SoundManager : MonoBehaviour
     private AudioClip lastMusic;
     private AudioClip lastAmbient;
     private bool isFading;
+    private float musicVolume;
+    private float ambientVolume;
+    private float sfxVolume;
     public static SoundManager instance;
 
     private void Awake() {
@@ -40,7 +41,6 @@ public class SoundManager : MonoBehaviour
 
     private void Start() {
         PlayMusic();
-        musicSource.volume = 0;
         StartCoroutine(FadeIn(musicSource, musicVolume));
     }
 
@@ -156,6 +156,12 @@ public class SoundManager : MonoBehaviour
 
     public void SetConfig(VolumesData volumes) {
         musicVolume = volumes.musicVolume / 100f;
+        ambientVolume = volumes.ambientVolume / 100f;
+        sfxVolume = volumes.sfxVolume / 100f;
+
         musicSource.volume = musicVolume;
+        ambientSource.volume = ambientVolume;
+        sfxSource.volume = sfxVolume;
+        loopSource.volume = sfxVolume;
     }
 }

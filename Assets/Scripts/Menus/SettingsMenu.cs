@@ -7,6 +7,8 @@ using UnityEngine.UI;
 public class SettingsMenu : MenuBase, ISaveable
 {
     [SerializeField] Slider musicVolumeSlider;
+    [SerializeField] Slider ambientVolumeSlider;
+    [SerializeField] Slider sFXVolumeSlider;
 
     private void Awake() {
     }
@@ -16,13 +18,15 @@ public class SettingsMenu : MenuBase, ISaveable
     }
 
     public object GetData() {
-        return new VolumesData(musicVolumeSlider.value);
+        return new VolumesData(musicVolumeSlider.value, ambientVolumeSlider.value, sFXVolumeSlider.value);
     }
 
     public void SetData(object data) {
         VolumesData volumesData = (VolumesData)data;
 
         musicVolumeSlider.value = volumesData.musicVolume;
+        ambientVolumeSlider.value = volumesData.ambientVolume;
+        sFXVolumeSlider.value = volumesData.sfxVolume;
         UpdateSoundManager();
     }
 
