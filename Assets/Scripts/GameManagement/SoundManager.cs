@@ -153,4 +153,9 @@ public class SoundManager : MonoBehaviour
 
         isFading = false;
     }
+
+    public void SetConfig(VolumesData volumes) {
+        musicVolume = volumes.musicVolume / 100f;
+        musicSource.volume = musicVolume;
+    }
 }

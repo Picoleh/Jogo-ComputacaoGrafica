@@ -11,6 +11,8 @@ public class SaveManager : MonoBehaviour{
     private bool loadSave;
     private PlayerMovement player;
     private InventoryManager inventory;
+    [SerializeField] private SettingsMenu settingsMenu;
+    [SerializeField] private GameObject allMenus;
     private List<NPC> npcs = new();
 
     private void Awake() {
@@ -21,6 +23,7 @@ public class SaveManager : MonoBehaviour{
         instance = this;
         loadSave = false;
         DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(allMenus);
     }
 
     public void RegisterPlayer(PlayerMovement p) {
@@ -47,8 +50,13 @@ public class SaveManager : MonoBehaviour{
         SaveSystem.Save(new GameData(playerData, inventoryData, nPCDatas));
     }
 
+    public void SaveConfig() {
+        VolumesData volumesData = settingsMenu.GetData() as VolumesData;
+        SaveSystem.Save(new ConfigData(volumesData));
+    }
+
     public void LoadGameData() {
-        GameData gameData = SaveSystem.Load();
+        GameData gameData = SaveSystem.LoadGameSave();
         if (gameData == null)
             return;
         player.SetData(gameData.playerData);
@@ -58,6 +66,13 @@ public class SaveManager : MonoBehaviour{
         }
     }
 
+    public void LoadConfigData() {
+        ConfigData configData = SaveSystem.LoadConfigSave();
+        if (configData == null) 
+            return;
+
+        settingsMenu.SetData(configData.volumesData);
+    }
 
     public void ChangeScenes(bool newSave) {
         loadSave = !newSave;

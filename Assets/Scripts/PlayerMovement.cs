@@ -122,7 +122,7 @@ public class PlayerMovement : MonoBehaviour, ISaveable{
         }
     }
 
-    public void OnOpenMenu(InputAction.CallbackContext context) {
+    public void OnOpenPauseMenu(InputAction.CallbackContext context) {
         if (context.performed) {
             PauseMenuManager.instance.OpenMenu();
         }
