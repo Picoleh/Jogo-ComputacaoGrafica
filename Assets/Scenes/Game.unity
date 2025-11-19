@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 3581965}
   - component: {fileID: 3581964}
   - component: {fileID: 3581963}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Esquerda-Oeste
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -505,7 +505,7 @@ GameObject:
   - component: {fileID: 31295147}
   - component: {fileID: 31295146}
   - component: {fileID: 31295145}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Oeste
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2749,7 +2749,7 @@ GameObject:
   - component: {fileID: 203267568}
   - component: {fileID: 203267567}
   - component: {fileID: 203267566}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Atras_Oeste
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3010,7 +3010,7 @@ GameObject:
   - component: {fileID: 218865245}
   - component: {fileID: 218865244}
   - component: {fileID: 218865243}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Terrain_(-175.00, 0.00, -175.00)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7131,7 +7131,7 @@ GameObject:
   - component: {fileID: 462169801}
   - component: {fileID: 462169800}
   - component: {fileID: 462169799}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Terrain_(-325.00, 0.00, 275.00)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7937,7 +7937,7 @@ GameObject:
   - component: {fileID: 527217518}
   - component: {fileID: 527217517}
   - component: {fileID: 527217516}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Direita_Oeste
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8369,7 +8369,7 @@ GameObject:
   - component: {fileID: 551425084}
   - component: {fileID: 551425083}
   - component: {fileID: 551425082}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: MontanhaNorte_Norte
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8813,7 +8813,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &569080548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9409,8 +9409,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 604253642}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.15212338, y: -2.0387822e-10, z: 3.1379857e-11, w: 0.98836154}
-  m_LocalPosition: {x: 400, y: 3.4270582, z: 97.46283}
+  m_LocalRotation: {x: 0.081391685, y: 0.000000029703449, z: -0.000000002425662, w: 0.9966822}
+  m_LocalPosition: {x: 400, y: 3.0081909, z: 97.340744}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10660,7 +10660,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &669277952
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11311,7 +11311,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!225 &716780179
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -11808,7 +11808,7 @@ GameObject:
   - component: {fileID: 739752500}
   - component: {fileID: 739752499}
   - component: {fileID: 739752498}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Medio_Leste
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12518,7 +12518,7 @@ GameObject:
   - component: {fileID: 781188987}
   - component: {fileID: 781188986}
   - component: {fileID: 781188985}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Terrain_(-325.00, 0.00, -175.00)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16053,6 +16053,10 @@ PrefabInstance:
     - target: {fileID: 343014886167071686, guid: 1688177c26307c94f8ef0cdf8604da5d, type: 3}
       propertyPath: m_Name
       value: SM_farm_hous
+      objectReference: {fileID: 0}
+    - target: {fileID: 343014886167071686, guid: 1688177c26307c94f8ef0cdf8604da5d, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 343014886167071686, guid: 1688177c26307c94f8ef0cdf8604da5d, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -19683,7 +19687,7 @@ GameObject:
   - component: {fileID: 1265201070}
   - component: {fileID: 1265201069}
   - component: {fileID: 1265201068}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Sudoeste
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20567,7 +20571,7 @@ GameObject:
   - component: {fileID: 1308109818}
   - component: {fileID: 1308109817}
   - component: {fileID: 1308109816}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: AgroFNorte_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22367,6 +22371,7 @@ GameObject:
   - component: {fileID: 1401832953}
   - component: {fileID: 1401832952}
   - component: {fileID: 1401832951}
+  - component: {fileID: 1401832958}
   m_Layer: 0
   m_Name: Camera Config
   m_TagString: Untagged
@@ -22465,7 +22470,7 @@ MonoBehaviour:
       Size: {x: 0.8, y: 0.8}
       Offset: {x: 0, y: 0}
   CenterOnActivate: 1
-  TargetOffset: {x: 0, y: 0, z: 0}
+  TargetOffset: {x: 0, y: 1, z: 0}
   Damping: {x: 0.5, y: 0.5}
   Lookahead:
     Enabled: 0
@@ -22523,8 +22528,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1401832950}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.15212338, y: -2.0387822e-10, z: 3.1379857e-11, w: 0.98836154}
-  m_LocalPosition: {x: 400, y: 3.4270582, z: 97.46283}
+  m_LocalRotation: {x: 0.081391685, y: 0.000000029703447, z: -0.0000000024256617, w: 0.9966822}
+  m_LocalPosition: {x: 400, y: 3.0081909, z: 97.340744}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22574,9 +22579,9 @@ MonoBehaviour:
       Time: 2
     Restrictions: 0
   VerticalAxis:
-    Value: 17.5
+    Value: 15
     Center: 17.5
-    Range: {x: -10, y: 45}
+    Range: {x: 0, y: 45}
     Wrap: 0
     Recentering:
       Enabled: 0
@@ -22593,6 +22598,36 @@ MonoBehaviour:
       Wait: 1
       Time: 2
     Restrictions: 0
+--- !u!114 &1401832958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1401832950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca7de3aefa901374ba29464584a3109a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CameraRadius: 0.2
+  Decollision:
+    Enabled: 1
+    ObstacleLayers:
+      serializedVersion: 2
+      m_Bits: 128
+    UseFollowTarget:
+      Enabled: 0
+      YOffset: 0
+    Damping: 0.6
+    SmoothingTime: 0.05
+  TerrainResolution:
+    Enabled: 1
+    TerrainLayers:
+      serializedVersion: 2
+      m_Bits: 136
+    MaximumRaycast: 25
+    Damping: 0.7
 --- !u!1 &1402019969
 GameObject:
   m_ObjectHideFlags: 0
@@ -22604,7 +22639,7 @@ GameObject:
   - component: {fileID: 1402019972}
   - component: {fileID: 1402019971}
   - component: {fileID: 1402019970}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Medio_Sul
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22912,7 +22947,7 @@ GameObject:
   - component: {fileID: 1416921331}
   - component: {fileID: 1416921330}
   - component: {fileID: 1416921329}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: AgroFNorte_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23081,7 +23116,7 @@ GameObject:
   - component: {fileID: 1428960424}
   - component: {fileID: 1428960423}
   - component: {fileID: 1428960422}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Medio_Sudoeste
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26050,7 +26085,7 @@ GameObject:
   - component: {fileID: 1573968121}
   - component: {fileID: 1573968120}
   - component: {fileID: 1573968119}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Medio_Oeste
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29510,7 +29545,7 @@ GameObject:
   - component: {fileID: 1746894775}
   - component: {fileID: 1746894774}
   - component: {fileID: 1746894773}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: MontanhaNorte_Leste
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30739,6 +30774,10 @@ PrefabInstance:
       value: SM_garage
       objectReference: {fileID: 0}
     - target: {fileID: 2322629898489966807, guid: 8007c9971949d50488fa77108e2645f9, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2322629898489966807, guid: 8007c9971949d50488fa77108e2645f9, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -31704,7 +31743,7 @@ GameObject:
   - component: {fileID: 1850372302}
   - component: {fileID: 1850372301}
   - component: {fileID: 1850372300}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Sul
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36647,7 +36686,6 @@ MonoBehaviour:
   interactorScript: {fileID: 2141284713}
   move: {fileID: 5309433219436067757, guid: ad9d1c91c57bee34e8e497d564cc5c32, type: 3}
   isSprinting: 0
-  inputActions: {fileID: -944628639613478452, guid: ad9d1c91c57bee34e8e497d564cc5c32, type: 3}
 --- !u!114 &2141284713
 MonoBehaviour:
   m_ObjectHideFlags: 0

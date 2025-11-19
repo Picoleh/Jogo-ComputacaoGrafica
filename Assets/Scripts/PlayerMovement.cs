@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour, ISaveable{
     [SerializeField] private CharacterController controller;
@@ -17,11 +18,13 @@ public class PlayerMovement : MonoBehaviour, ISaveable{
 
     [SerializeField] private InputActionReference move;
     [SerializeField] private bool isSprinting;
-    [SerializeField] private InputActionAsset inputActions;
 
 
     private void Awake() {
-        SaveManager.instance.RegisterPlayer(this);
+        if (SaveManager.instance == null)
+            SceneManager.LoadScene("MainMenu");
+        else
+            SaveManager.instance.RegisterPlayer(this);
     }
 
     private void Start() {
