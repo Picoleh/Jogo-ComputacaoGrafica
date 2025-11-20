@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27b59d6df643df945a2fc0657b743ff4, type: 3}
   m_Name: Quest_Sul
   m_EditorClassIdentifier: 
-  _completed: 0
-  id: 1
+  _completed: 1
+  id: 2
   questTitle: Turturafa
   description: planta as badnmdeira
   questDialogue: {fileID: 11400000, guid: 7ecb1fb992e17054fba6209d24069f47, type: 2}
@@ -26,6 +26,10 @@ MonoBehaviour:
   prefabsTarget:
   - {fileID: 4351518172069271264, guid: 7655f233ab564e04c9918a5e8eb72d00, type: 3}
   - {fileID: 4351518172069271264, guid: 7655f233ab564e04c9918a5e8eb72d00, type: 3}
+  - {fileID: 4351518172069271264, guid: 7655f233ab564e04c9918a5e8eb72d00, type: 3}
+  - {fileID: 4351518172069271264, guid: 7655f233ab564e04c9918a5e8eb72d00, type: 3}
   positions:
-  - {x: -280.434, y: 5.61, z: 27.297}
-  - {x: -270.7, y: 5.61, z: 27.297}
+  - {x: -285.77, y: 2.93, z: 14.117348}
+  - {x: -291.7, y: 2.93, z: 28.000175}
+  - {x: -287.7289, y: 2.93, z: 63.286346}
+  - {x: -245.17, y: 5.27, z: 88.54}

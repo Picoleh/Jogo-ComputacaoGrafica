@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Quest_Oeste
   m_EditorClassIdentifier: 
   _completed: 0
-  id: 0
+  id: 1
   questTitle: where did i leave it?
   description: ooo meu fi kd
   questDialogue: {fileID: 11400000, guid: ee6576a8c51f57a4b82ca570251d332b, type: 2}
@@ -21,11 +21,17 @@ MonoBehaviour:
   comebackFinished: {fileID: 11400000, guid: ce9f974b295eaf342b01cf168c7aba55, type: 2}
   itemReward: {fileID: 11400000, guid: e88bd441ced5f0245bab11309a8d1f29, type: 2}
   _itensToCollect:
-  - {fileID: 11400000, guid: edec850a5f04d8046b199c6c2b62620d, type: 2}
-  - {fileID: 11400000, guid: 94060cfd86df16a44a523379ef92f530, type: 2}
+  - {fileID: 11400000, guid: b94e301c4b8cd434f881181daeda4219, type: 2}
+  - {fileID: 11400000, guid: c8e70fb1d0819c242889fc1cd877c2a9, type: 2}
+  - {fileID: 11400000, guid: d4378a42c4e6d5a45a04749a34f3d5ed, type: 2}
+  - {fileID: 11400000, guid: cb21553b1c5b5f642893a60d6bc364b8, type: 2}
   prefabs:
-  - {fileID: 6017427612744027884, guid: 3aabd8b880e393c41bb80c078fa94711, type: 3}
-  - {fileID: 22648899321674013, guid: 6b33774543b7deb4988a0676e64e21fb, type: 3}
+  - {fileID: 6472228362415718915, guid: 487d09c0c4dd855459d84eb36983038f, type: 3}
+  - {fileID: 4852346778258279092, guid: 809ffb640f3f7cb4a8e1def5a747b53e, type: 3}
+  - {fileID: 1191006068828431103, guid: 29f55e76a2a962f45a24b10c29074eff, type: 3}
+  - {fileID: 8128409608544658711, guid: 38d7be83387c9bc46902c265986d48cb, type: 3}
   positions:
-  - {x: 19, y: 0.01, z: 350}
-  - {x: 13, y: 0.01, z: 363}
+  - {x: 19.011694, y: 0, z: 351.41513}
+  - {x: 12.680528, y: 0.0054821433, z: 363.21338}
+  - {x: 25.332747, y: -0.009432077, z: 364.23853}
+  - {x: 24.274, y: -0.0000013113022, z: 370.757}

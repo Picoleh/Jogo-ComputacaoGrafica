@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 622d4f87393e5954999b8b9b0beeb32b, type: 3}
+  m_Name: Quest_Main
+  m_EditorClassIdentifier: 
+  _completed: 0
+  id: 0
+  questTitle: Salvar a earth
+  description: Colete os trens itens o mais rapido possible
+  questDialogue: {fileID: 11400000, guid: 4033edd8af71c254480990ba0fbb5567, type: 2}
+  comebackInProgress: {fileID: 11400000, guid: 3d9f17a25fd49d04381ea621d4e59109, type: 2}
+  comebackFinished: {fileID: 11400000, guid: 46e2c2e8b4ee57347a437907cf53053b, type: 2}
+  itemReward: {fileID: 0}
+  _itensToCollect:
+  - {fileID: 11400000, guid: e88bd441ced5f0245bab11309a8d1f29, type: 2}
+  - {fileID: 11400000, guid: b75255f7f38282c49baf965f97bc863b, type: 2}
+  - {fileID: 11400000, guid: 661eee40bce1f2444b0844ff4743249c, type: 2}
+  prefabs: []
+  positions: []

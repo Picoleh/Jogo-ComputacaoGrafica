@@ -1040,9 +1040,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4242913954264332348}
-  - component: {fileID: 2571720327794748658}
   - component: {fileID: 8717703948063408901}
   - component: {fileID: 8121525756661837611}
+  - component: {fileID: 5034689381597300810}
   m_Layer: 6
   m_Name: Cow_Zelda
   m_TagString: Untagged
@@ -1067,47 +1067,6 @@ Transform:
   - {fileID: 2600911535545128815}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!111 &2571720327794748658
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3578685422765171334}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Animation: {fileID: -7423180918342364789, guid: e045036e5f136c94a802a0d9116a65b1, type: 3}
-  m_Animations:
-  - {fileID: -7423180918342364789, guid: e045036e5f136c94a802a0d9116a65b1, type: 3}
-  - {fileID: 2771865946972476010, guid: e045036e5f136c94a802a0d9116a65b1, type: 3}
-  - {fileID: 4348485665485846014, guid: e045036e5f136c94a802a0d9116a65b1, type: 3}
-  - {fileID: 3673095150341620287, guid: e045036e5f136c94a802a0d9116a65b1, type: 3}
-  - {fileID: -7180914814543497415, guid: e045036e5f136c94a802a0d9116a65b1, type: 3}
-  - {fileID: 1485581873647467237, guid: e045036e5f136c94a802a0d9116a65b1, type: 3}
-  - {fileID: 1524733597206663280, guid: e045036e5f136c94a802a0d9116a65b1, type: 3}
-  - {fileID: -3892366662005823256, guid: e045036e5f136c94a802a0d9116a65b1, type: 3}
-  - {fileID: 1554707017388164449, guid: e045036e5f136c94a802a0d9116a65b1, type: 3}
-  - {fileID: 2667949614841947897, guid: e045036e5f136c94a802a0d9116a65b1, type: 3}
-  - {fileID: 300782237984217352, guid: e045036e5f136c94a802a0d9116a65b1, type: 3}
-  - {fileID: 1245882690682072010, guid: e045036e5f136c94a802a0d9116a65b1, type: 3}
-  - {fileID: -3100369314251171874, guid: e045036e5f136c94a802a0d9116a65b1, type: 3}
-  - {fileID: 4740071466891634567, guid: e045036e5f136c94a802a0d9116a65b1, type: 3}
-  - {fileID: -8735307935826674370, guid: e045036e5f136c94a802a0d9116a65b1, type: 3}
-  - {fileID: 7370985682789098114, guid: e045036e5f136c94a802a0d9116a65b1, type: 3}
-  - {fileID: 5845618705403835542, guid: e045036e5f136c94a802a0d9116a65b1, type: 3}
-  - {fileID: -7666980397028532464, guid: e045036e5f136c94a802a0d9116a65b1, type: 3}
-  - {fileID: 9013133730026320192, guid: e045036e5f136c94a802a0d9116a65b1, type: 3}
-  - {fileID: -5105944257485555118, guid: e045036e5f136c94a802a0d9116a65b1, type: 3}
-  - {fileID: 9203789705941672436, guid: e045036e5f136c94a802a0d9116a65b1, type: 3}
-  - {fileID: 4119872625232273396, guid: e045036e5f136c94a802a0d9116a65b1, type: 3}
-  - {fileID: -3818105308243361847, guid: e045036e5f136c94a802a0d9116a65b1, type: 3}
-  - {fileID: -34225311753368521, guid: e045036e5f136c94a802a0d9116a65b1, type: 3}
-  - {fileID: -4864718358596981803, guid: e045036e5f136c94a802a0d9116a65b1, type: 3}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_UpdateMode: 0
-  m_CullingType: 1
 --- !u!114 &8717703948063408901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1120,6 +1079,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ac68bed68beccc44a9c1533057a68ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyOnInteract: 0
+  animator: {fileID: 5034689381597300810}
 --- !u!65 &8121525756661837611
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1141,6 +1102,28 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.74, y: 5.25, z: 7.01}
   m_Center: {x: 0, y: 2.77, z: 0.93}
+--- !u!95 &5034689381597300810
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3578685422765171334}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 76f422d01a0928b4cbd54b3fb0887e29, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3615701641775086103
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,6 +4,9 @@ public class TargetIndicator : MonoBehaviour, IInteractable {
     private string prompt;
     private string targetInteractedNotification;
     private GameObject spawnAtTarget;
+    [SerializeField] private bool destroyOnInteract;
+    [SerializeField] private Animator animator;
+    public bool interacted = false;
 
     public string interactionPrompt => string.IsNullOrEmpty(prompt) ? "Interagir" : prompt;
 
@@ -11,7 +14,15 @@ public class TargetIndicator : MonoBehaviour, IInteractable {
         NotificationManager.instance.ShowNotification(string.IsNullOrEmpty(targetInteractedNotification) ? "Interagido" : targetInteractedNotification);
         if(spawnAtTarget != null)
             GameObject.Instantiate(spawnAtTarget, transform.position, Quaternion.identity);
-        Destroy(gameObject);
+
+        if(destroyOnInteract)
+            Destroy(gameObject);
+
+        if(animator != null) {
+            animator.SetTrigger("Interacted");
+        }
+
+        interacted = true;
     }
 
     public void SetPrompt(string prompt) {

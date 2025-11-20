@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cee28758dda6d3c429bd1ea77db61bb6, type: 3}
   m_Name: Gasoline-Info
   m_EditorClassIdentifier: 
-  itemName: Gasoline
+  itemName: "Combust\xEDvel Especial"
   itemDescription: Bota no carro
   icon: {fileID: 21300000, guid: a5d15594cde3f31409fe7649f552283b, type: 3}

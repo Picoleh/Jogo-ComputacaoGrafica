@@ -9,10 +9,10 @@ public class QuestVisitPlace : QuestBase {
     public GameObject spawnAtTarget;
     public List<TargetIndicator> prefabsTarget;
     public List<Vector3> positions;
-    private List<GameObject> instancias;
+    private List<TargetIndicator> instancias;
 
     public override void StartQuest() {
-        instancias = new List<GameObject>();
+        instancias = new List<TargetIndicator>();
         if (prefabsTarget.Count != positions.Count) {
             Debug.Log("Numero de prefabsTarget != numero de posicoes at QuestVisitPlace");
             return;
@@ -21,7 +21,7 @@ public class QuestVisitPlace : QuestBase {
         for (int i = 0; i < prefabsTarget.Count; i++) {
             TargetIndicator instancia = GameObject.Instantiate(prefabsTarget[i], positions[i], Quaternion.identity);
 
-            instancias.Add(instancia.gameObject);
+            instancias.Add(instancia);
 
             instancia.SetPrompt(promptOnTarget);
             instancia.SetTargetInteractedNotificationMessage(messageInteractedTarget);
@@ -37,7 +37,7 @@ public class QuestVisitPlace : QuestBase {
         }
         else { 
             foreach(var target in instancias) {
-                if (target != null)
+                if (target != null && !target.interacted)
                     return false;
             }
 

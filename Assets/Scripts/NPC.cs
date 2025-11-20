@@ -39,16 +39,16 @@ public class NPC : MonoBehaviour, IInteractable, ISaveable{
 
     }
 
-    private void ShowMissionNotification() {
-        InventoryManager.instance.AddQuest(_quest);
-        DialogueSystem.instance.OnDialogueEnd -= ShowMissionNotification;
-    }
+    //private void ShowMissionNotification() {
+    //    InventoryManager.instance.AddQuest(_quest);
+    //    DialogueSystem.instance.OnDialogueEnd -= ShowMissionNotification;
+    //}
 
-    private void GiveReward() {
-        InventoryManager.instance.AddItem(_quest.getReward());
-        //InventoryManager.instance.RemoveQuest(_quest);
-        DialogueSystem.instance.OnDialogueEnd -= GiveReward;
-    }
+    //private void GiveReward() {
+    //    InventoryManager.instance.AddItem(_quest.getReward());
+    //    //InventoryManager.instance.RemoveQuest(_quest);
+    //    DialogueSystem.instance.OnDialogueEnd -= GiveReward;
+    //}
 
     public object GetData() {
         return new NPCData(_firstInteraction, _quest._completed);
