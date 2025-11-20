@@ -97,7 +97,7 @@ public class SaveManager : MonoBehaviour{
         }
         
         // 4️(opcional) tempo mínimo de loading
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(1f);
 
 
         // 6️ Ativar a nova cena
