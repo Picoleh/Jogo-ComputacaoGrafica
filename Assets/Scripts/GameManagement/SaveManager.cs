@@ -55,8 +55,7 @@ public class SaveManager : MonoBehaviour{
     }
 
     public void SaveConfig() {
-        VolumesData volumesData = settingsMenu.GetData() as VolumesData;
-        SaveSystem.Save(new ConfigData(volumesData));
+        SaveSystem.Save(settingsMenu.GetData() as ConfigData);
     }
 
     public void LoadGameData() {
@@ -75,7 +74,7 @@ public class SaveManager : MonoBehaviour{
         if (configData == null) 
             return;
 
-        settingsMenu.SetData(configData.volumesData);
+        settingsMenu.SetData(configData);
     }
 
     public void ChangeScenes(bool newSave) {
