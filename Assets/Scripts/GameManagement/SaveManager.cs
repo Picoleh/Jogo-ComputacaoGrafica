@@ -36,6 +36,12 @@ public class SaveManager : MonoBehaviour{
         npcs.Add(n);
     }
 
+    public void ClearRegisters() {
+        player = null;
+        inventory = null;
+        npcs.Clear();
+    }
+
     public void SaveGame() {
         PlayerData playerData = player.GetData() as PlayerData;
         InventoryData inventoryData = inventory.GetData() as InventoryData;

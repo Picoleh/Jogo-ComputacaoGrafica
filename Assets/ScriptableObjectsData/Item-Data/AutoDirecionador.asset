@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cee28758dda6d3c429bd1ea77db61bb6, type: 3}
   m_Name: AutoDirecionador
   m_EditorClassIdentifier: 
-  itemName: Auto-Direcionador
+  itemName: AutoDirecionador
   itemDescription: 
   icon: {fileID: 0}

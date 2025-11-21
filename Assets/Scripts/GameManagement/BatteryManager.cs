@@ -11,7 +11,7 @@ public class BatteryManager : MonoBehaviour
     public Action<float> OnBatteryChanged;
 
     void Start() {
-        currentBattery = maxBattery;
+        Reset();
     }
 
     void Update() {
@@ -40,5 +40,9 @@ public class BatteryManager : MonoBehaviour
 
     public void SetUsing(bool value) {
         isUsingBattery = value;
+    }
+
+    public void Reset() {
+        currentBattery = maxBattery;
     }
 }
