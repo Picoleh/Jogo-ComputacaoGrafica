@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27b59d6df643df945a2fc0657b743ff4, type: 3}
   m_Name: Quest_Norte
   m_EditorClassIdentifier: 
-  _completed: 0
+  _completed: 1
   id: 3
   questTitle: As casas se movem?
   description: Uma pintola uma uma uma uma
   questDialogue: {fileID: 11400000, guid: d494693209ad8054084fb61bac0ca569, type: 2}
   comebackInProgress: {fileID: 11400000, guid: 9e75d80097512bd4097aef6da2cbe5bc, type: 2}
   comebackFinished: {fileID: 11400000, guid: ad02387bd21c87842beeec532ff2210d, type: 2}
-  itemReward: {fileID: 11400000, guid: e88bd441ced5f0245bab11309a8d1f29, type: 2}
+  itemReward: {fileID: 11400000, guid: 661eee40bce1f2444b0844ff4743249c, type: 2}
   promptOnTarget: "Anotar posi\xE7\xE3o"
   messageInteractedTarget: "Posi\xE7\xE3o anotada"
   spawnAtTarget: {fileID: 0}

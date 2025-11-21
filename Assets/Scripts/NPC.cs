@@ -18,37 +18,17 @@ public class NPC : MonoBehaviour, IInteractable, ISaveable{
 
     public void Interact(Interactor interactor) {
         _animator.SetTrigger("Interacted");
-        //_animator.ResetTrigger("Interacted");
         if (_firstInteraction) { 
             DialogueSystem.instance.StartDialogue(_npcName, _quest.questDialogue);
             _firstInteraction = false;
-            //DialogueSystem.instance.OnDialogueEnd += ShowMissionNotification;
             if(_quest != null)
                 _quest.StartQuest();
         }
         else {
             DialogueSystem.instance.StartDialogue(_npcName, _quest.getCombackDialog());
-            //if (_quest.isCompleted() && !_receivedReward) {
-            //    DialogueSystem.instance.OnDialogueEnd += GiveReward;
-            //    _receivedReward = true;
-            //}
-            //else {
-            //    InventoryManager.instance.RemoveItem(_quest.getReward());
-            //}
         }
 
     }
-
-    //private void ShowMissionNotification() {
-    //    InventoryManager.instance.AddQuest(_quest);
-    //    DialogueSystem.instance.OnDialogueEnd -= ShowMissionNotification;
-    //}
-
-    //private void GiveReward() {
-    //    InventoryManager.instance.AddItem(_quest.getReward());
-    //    //InventoryManager.instance.RemoveQuest(_quest);
-    //    DialogueSystem.instance.OnDialogueEnd -= GiveReward;
-    //}
 
     public object GetData() {
         return new NPCData(_firstInteraction, _quest._completed);

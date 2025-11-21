@@ -47,6 +47,9 @@ public abstract class QuestBase : ScriptableObject{
         else {
             itemReward = null;
         }
+
+        if(_ownerName == "Tonclay")
+            MenuManager.instance.OpenMenu(MenuType.GameOver, GameOverType.Won);
     }
 
     public void AddQuestToInventory() {  

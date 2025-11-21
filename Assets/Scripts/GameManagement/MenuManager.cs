@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using NUnit.Framework.Interfaces;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -7,12 +8,15 @@ using UnityEngine.SceneManagement;
 public enum MenuType {
     Main,
     Pause,
-    Settings
+    Settings,
+    GameOver
 }
 
 public class MenuManager : MonoBehaviour
 {
     public static MenuManager instance;
+
+    [SerializeField] BatteryManager batteryManager;
 
     [Header("Mesma ordem do enum")]
     [SerializeField] private List<MenuBase> menus;
@@ -38,6 +42,19 @@ public class MenuManager : MonoBehaviour
         }
 
         menus[(int)menuType].OpenMenu();
+        batteryManager.SetUsing(false);
+        gameObject.SetActive(true);
+    }
+
+    public void OpenMenu(MenuType menuType, GameOverType type) {
+        InputMapManager.instance.DisableControls();
+        Cursor.lockState = CursorLockMode.None;
+        foreach (var menu in menus) {
+            menu.CloseMenu();
+        }
+
+        menus[(int)menuType].OpenMenu(type, batteryManager.currentBattery, batteryManager.maxBattery);
+        batteryManager.SetUsing(false);
         gameObject.SetActive(true);
     }
 
@@ -45,6 +62,7 @@ public class MenuManager : MonoBehaviour
         InputMapManager.instance.EnableMap("Gameplay");
         Cursor.lockState = CursorLockMode.Locked;
         gameObject.SetActive(false);
+        batteryManager.SetUsing(true);
     }
 
     public void GoBack() {

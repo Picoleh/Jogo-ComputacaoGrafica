@@ -2,11 +2,14 @@ using UnityEngine;
 
 public class MenuBase : MonoBehaviour
 {
-    public void OpenMenu() {
+    public virtual void OpenMenu() {
         gameObject.SetActive(true);
     }
 
-    public void CloseMenu() {
+    public virtual void OpenMenu(GameOverType type, float battery, float maxBattery) {
+    }
+
+    public virtual void CloseMenu() {
         gameObject.SetActive(false);
     }
 }

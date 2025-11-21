@@ -122,12 +122,12 @@ public class InventoryManager : MonoBehaviour, ISaveable
         Cursor.lockState = CursorLockMode.None;
         _invUI.SetActive(true);
 
-        foreach (var slot in itensSlots) {
-            if (slot.gameObject.activeSelf) {
-                EventSystem.current.SetSelectedGameObject(slot.gameObject);
-                break;
-            }
-        }
+        //foreach (var slot in itensSlots) {
+        //    if (slot.gameObject.activeSelf) {
+        //        EventSystem.current.SetSelectedGameObject(slot.gameObject);
+        //        break;
+        //    }
+        //}
     }
 
     public void OnCloseInventory() {
