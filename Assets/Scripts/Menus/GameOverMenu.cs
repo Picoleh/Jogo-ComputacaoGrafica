@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -15,12 +16,18 @@ public class GameOverMenu : MenuBase
     [SerializeField] TextMeshProUGUI scoreText;
     [SerializeField] Button mainMenuButton;
 
+    [Header("Mesma ordem enums")]
+    [SerializeField] List<Sprite> endScreens;
+
+    private GameOverType gameOver;
+
     private void Awake() {
         mainMenuButton.onClick.AddListener(OnMainMenuClick);
     }
 
 
     public override void OpenMenu(GameOverType type, float battery, float maxBattery) {
+        gameOver = type;
         if (type == GameOverType.Won)
             statusText.text = "VOCÊ GANHOU!";
         else
@@ -35,9 +42,14 @@ public class GameOverMenu : MenuBase
                 break;
         }
 
-        scoreText.text = "Sua pontuação final é: " + ((int)battery).ToString() + "/" + ((int)maxBattery).ToString();
+        int score = (int)((battery * 100f) / maxBattery);
+        scoreText.text = "Sua pontuação final é: " + score.ToString() + "/100";
 
         base.OpenMenu();
+    }
+
+    public override Sprite GetImage() {
+        return endScreens[(int)gameOver];
     }
 
     private void OnMainMenuClick() {

@@ -214,7 +214,29 @@
                 {
                     "name": "",
                     "id": "4b84e0eb-17f9-4df9-9f34-ff7c72ae7997",
-                    "path": "<Keyboard>/g",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "NextSentence",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "11be9da4-a70e-4cf7-8a38-9427d615973b",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "NextSentence",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6a7fb4ac-8e62-406c-a317-7e736b8931a7",
+                    "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

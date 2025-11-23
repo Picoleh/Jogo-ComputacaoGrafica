@@ -3,6 +3,7 @@ using NUnit.Framework.Interfaces;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 
 public enum MenuType {
@@ -18,10 +19,12 @@ public class MenuManager : MonoBehaviour
 
     [SerializeField] BatteryManager batteryManager;
 
+    [SerializeField] Image bgImage;
+
     [Header("Mesma ordem do enum")]
     [SerializeField] private List<MenuBase> menus;
 
-    
+
 
     private void Awake() {
         if (instance != null && instance != this) {
@@ -42,6 +45,7 @@ public class MenuManager : MonoBehaviour
         }
 
         menus[(int)menuType].OpenMenu();
+        bgImage.sprite = menus[(int)menuType].GetImage();
         batteryManager.SetUsing(false);
         gameObject.SetActive(true);
     }
@@ -54,6 +58,7 @@ public class MenuManager : MonoBehaviour
         }
 
         menus[(int)menuType].OpenMenu(type, batteryManager.currentBattery, batteryManager.maxBattery);
+        bgImage.sprite = menus[(int)menuType].GetImage();
         batteryManager.SetUsing(false);
         gameObject.SetActive(true);
     }

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27b59d6df643df945a2fc0657b743ff4, type: 3}
   m_Name: Quest_Norte
   m_EditorClassIdentifier: 
-  _completed: 1
+  _completed: 0
   id: 3
   questTitle: As casas se movem?
   description: Uma pintola uma uma uma uma
@@ -26,4 +26,4 @@ MonoBehaviour:
   prefabsTarget:
   - {fileID: 8717703948063408901, guid: 3592c4fb6126b194c94981566343e2c1, type: 3}
   positions:
-  - {x: 409.4, y: 0, z: 117.2}
+  - {x: 142.26965, y: 0.0000042915344, z: 116.46613}

@@ -6,6 +6,7 @@ public class TargetIndicator : MonoBehaviour, IInteractable {
     private GameObject spawnAtTarget;
     [SerializeField] private bool destroyOnInteract;
     [SerializeField] private Animator animator;
+    [SerializeField] private AudioClip audioClip;
     public bool interacted = false;
 
     public string interactionPrompt => string.IsNullOrEmpty(prompt) ? "Interagir" : prompt;
@@ -21,6 +22,9 @@ public class TargetIndicator : MonoBehaviour, IInteractable {
         if(animator != null) {
             animator.SetTrigger("Interacted");
         }
+
+        if(audioClip != null)
+            SoundManager.instance.PlaySFX(audioClip);
 
         interacted = true;
     }

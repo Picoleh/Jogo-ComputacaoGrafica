@@ -1081,6 +1081,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destroyOnInteract: 0
   animator: {fileID: 5034689381597300810}
+  audioClip: {fileID: 8300000, guid: d4559bcde7d30b94f8bab222e186a71e, type: 3}
+  interacted: 0
 --- !u!65 &8121525756661837611
 BoxCollider:
   m_ObjectHideFlags: 0
