@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lines:
   - speaker: 0
-    text: opa peuqeno
+    text: "opa peuqeno, \xA2apital"
   - speaker: 0
     text: preciso disso ta ok, 3 coisas
   - speaker: 0

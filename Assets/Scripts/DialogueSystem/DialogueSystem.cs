@@ -34,6 +34,7 @@ public class DialogueSystem : MonoBehaviour {
 
     public void StartDialogue(string npcName, Dialogue dialogue) {
         InputMapManager.instance.EnableMap("Dialogue");
+        MenuManager.instance.StopBatteryConsume();
         sentences.Clear();
         foreach (DialogueLine line in dialogue.lines) {
             sentences.Enqueue(line);
@@ -89,6 +90,7 @@ public class DialogueSystem : MonoBehaviour {
     public void EndDialogue() {
         _dialogueCanvas.SetActive(false);
         InputMapManager.instance.EnableMap("Gameplay");
+        MenuManager.instance.ResumeBatteryConsume();
         OnDialogueEnd?.Invoke();
     }
 }

@@ -46,7 +46,7 @@ public class MenuManager : MonoBehaviour
 
         menus[(int)menuType].OpenMenu();
         bgImage.sprite = menus[(int)menuType].GetImage();
-        batteryManager.SetUsing(false);
+        StopBatteryConsume();
         gameObject.SetActive(true);
     }
 
@@ -59,7 +59,7 @@ public class MenuManager : MonoBehaviour
 
         menus[(int)menuType].OpenMenu(type, batteryManager.currentBattery, batteryManager.maxBattery);
         bgImage.sprite = menus[(int)menuType].GetImage();
-        batteryManager.SetUsing(false);
+        StopBatteryConsume();
         gameObject.SetActive(true);
     }
 
@@ -67,7 +67,15 @@ public class MenuManager : MonoBehaviour
         InputMapManager.instance.EnableMap("Gameplay");
         Cursor.lockState = CursorLockMode.Locked;
         gameObject.SetActive(false);
-        batteryManager.SetUsing(true);
+        ResumeBatteryConsume();
+    }
+
+    public void StopBatteryConsume() {
+        batteryManager.SetUsing(false);
+    }
+
+    public void ResumeBatteryConsume() {
+        batteryManager.SetUsing(false);
     }
 
     public void GoBack() {
