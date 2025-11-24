@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14703db81f592214698a9499c63d666e, type: 3}
   m_Name: Slide1
   m_EditorClassIdentifier: 
-  image: {fileID: 21300000, guid: 6a9c362ef5658a2449672fc249df9b8d, type: 3}
+  image: {fileID: 21300000, guid: 46bbe080b5a38534fb251150c825af28, type: 3}
   lines: {fileID: 11400000, guid: 73bef4ba0c56561479a1ad08aa085a82, type: 2}
