@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lines:
   - speaker: 0
-    text: Ola, djskdjskdjksdjks
+    text: "Olha s\xF3 quem veio! \xC9 um rob\xF4 muito fofo!"
   - speaker: 0
-    text: Entao preciso kblbalbalal, pode ser?
+    text: Pode me ajudar, amigo?
   - speaker: 1
-    text: beeee bop
+    text: "(Sons de rob\xF4)"
   - speaker: 0
     text: show de bola

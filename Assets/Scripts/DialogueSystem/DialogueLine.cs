@@ -4,6 +4,6 @@
 public class DialogueLine {
     public enum Speaker { NPC, Player }
     public Speaker speaker;
-    [TextArea(2, 5)]
+    [TextArea(4, 8)]
     public string text;
 }
