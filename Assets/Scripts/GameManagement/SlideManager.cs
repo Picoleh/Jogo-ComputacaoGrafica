@@ -22,7 +22,7 @@ public class SlideManager : MonoBehaviour
     }
 
     private IEnumerator StartIntroRoutine() {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(0.1f);
 
         NextSlide();
     }
