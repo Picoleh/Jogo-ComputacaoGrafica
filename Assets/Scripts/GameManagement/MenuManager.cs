@@ -1,6 +1,9 @@
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using NUnit.Framework.Interfaces;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -10,6 +13,7 @@ public enum MenuType {
     Main,
     Pause,
     Settings,
+    Credits,
     GameOver
 }
 
@@ -64,10 +68,12 @@ public class MenuManager : MonoBehaviour, ISaveable
     }
 
     public void CloseMenu() {
-        InputMapManager.instance.EnableMap("Gameplay");
-        Cursor.lockState = CursorLockMode.Locked;
-        gameObject.SetActive(false);
-        ResumeBatteryConsume();
+        if (SceneManager.GetActiveScene().name == "Game") {
+            InputMapManager.instance.EnableMap("Gameplay");
+            Cursor.lockState = CursorLockMode.Locked;
+            gameObject.SetActive(false);
+            ResumeBatteryConsume();
+        }
     }
 
     public void StopBatteryConsume() {
@@ -94,5 +100,21 @@ public class MenuManager : MonoBehaviour, ISaveable
     public void SetData(object data) {
         MenuData menuData = (MenuData)data;
         batteryManager.currentBattery = menuData.batteryLevel;
+    }
+
+    public IEnumerator LoadSceneRoutine(string sceneName, UnityAction<Scene, LoadSceneMode> onLoaded) {
+        LoadingScript.instance.ShowLoadScreen();
+        AsyncOperation async = SceneManager.LoadSceneAsync(sceneName);
+        async.allowSceneActivation = false;
+
+        while (async.progress < 0.9f) {
+            yield return null;
+        }
+
+        yield return new WaitForSeconds(1f);
+
+        async.allowSceneActivation = true;
+
+        SceneManager.sceneLoaded += onLoaded;
     }
 }

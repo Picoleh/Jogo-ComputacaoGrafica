@@ -121,13 +121,6 @@ public class InventoryManager : MonoBehaviour, ISaveable
         InputMapManager.instance.EnableMap("Inventory");
         Cursor.lockState = CursorLockMode.None;
         _invUI.SetActive(true);
-
-        //foreach (var slot in itensSlots) {
-        //    if (slot.gameObject.activeSelf) {
-        //        EventSystem.current.SetSelectedGameObject(slot.gameObject);
-        //        break;
-        //    }
-        //}
     }
 
     public void OnCloseInventory() {
@@ -143,10 +136,6 @@ public class InventoryManager : MonoBehaviour, ISaveable
             if(!slot.IsEmpty)
                 itensNames.Add(slot.getItem().itemName);
         }
-        //foreach(var slot in questSlots) {
-        //    if (!slot.IsEmpty)
-        //        questsIds.Add(slot.getQuest().id);
-        //}
         return new InventoryData(itensNames);
     }
 
@@ -155,10 +144,6 @@ public class InventoryManager : MonoBehaviour, ISaveable
         foreach (var item in invData.itens) {
             AddItem(_itemDatabase.GetItemByName(item));
         }
-
-        //foreach (var questId in invData.quests) {
-        //    AddQuest(_questDatabase.GetQuestById(questId));
-        //}
     }
 
     public bool HasItens(List<ItemInfo> itensToTest) {

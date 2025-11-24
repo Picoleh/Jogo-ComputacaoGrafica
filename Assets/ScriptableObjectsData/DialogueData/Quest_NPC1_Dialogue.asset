@@ -20,4 +20,36 @@ MonoBehaviour:
   - speaker: 1
     text: "(Sons de rob\xF4)"
   - speaker: 0
-    text: show de bola
+    text: "Como voc\xEA pode ver, nossa comunidade est\xE1 passando por uma situa\xE7\xE3o
+      dif\xEDcil desde que instalaram aquele trambolho."
+  - speaker: 0
+    text: "Antigamente O\xE1sis era um verdadeiro para\xEDso, mas agora, todo rejeito
+      e sucata gerado por aquela m\xE1quina\r"
+  - speaker: 0
+    text: "vem parar aqui por algum motivo misterioso. \r"
+  - speaker: 0
+    text: "Isso est\xE1 poluindo demais nosso solo, que j\xE1 era empobrecido."
+  - speaker: 0
+    text: "As pessoas que moravam mais longe do centro j\xE1 se mudaram para outras
+      cidades porque \xE9 muito dif\xEDcil viver nessa terra seca.\r"
+  - speaker: 0
+    text: "Faz um calor insuport\xE1vel, poucas \xE1rvores crescem, e agora com o
+      solo polu\xEDdo com o lixo, n\xE3o conseguimos plantar nada.\r"
+  - speaker: 0
+    text: "Conseguimos separar os rejeitos jogados aqui no lix\xE3o, e manejar isso
+      tudo \xE9 t\xE3o dif\xEDcil!\r"
+  - speaker: 1
+    text: "(Sons de rob\xF4)\r"
+  - speaker: 0
+    text: "\xC9 o seguinte, eu sou nova por aqui e me escalaram pra cuidar dos computadores
+      da sede do lix\xE3o hoje.\r"
+  - speaker: 0
+    text: "A fechadura da porta \xE9 digital mas n\xE3o sei a senha para abrir!\r"
+  - speaker: 0
+    text: "Eu soube que o antigo funcion\xE1rio anotava as senhas em embalagens e
+      deixava espalhado pra ningu\xE9m encontrar\u2026\r"
+  - speaker: 1
+    text: "(Sons de rob\xF4)\r"
+  - speaker: 0
+    text: "Se voc\xEA conseguir a senha para abrir o port\xE3o, pode pegar qualquer
+      sucata que achar por ali em troca, que tal?\r"

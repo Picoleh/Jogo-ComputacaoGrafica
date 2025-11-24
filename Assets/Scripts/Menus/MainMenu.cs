@@ -7,26 +7,51 @@ using UnityEngine.UI;
 public class MainMenu : MenuBase
 {
     [SerializeField] Button settingsButton;
+    [SerializeField] Button creditsButton;
     [SerializeField] BatteryManager batteryManager;
+
+    private bool loadSave = false;
 
     private void Awake() {
         settingsButton.onClick.AddListener(OnSettingsClick);
+        creditsButton.onClick.AddListener(OnCreditsClick);
     }
 
     public void OnNewGame() {
-        MenuManager.instance.CloseMenu();
         SaveManager.instance.ClearRegisters();
-        SaveManager.instance.ChangeScenes(newSave:true);
+        //SaveManager.instance.ChangeScenes(newSave:true);
+        loadSave = false;
+        StartCoroutine(MenuManager.instance.LoadSceneRoutine("Intro", OnIntroSceneLoaded));
     }
 
     public void OnLoadGame() {
-        MenuManager.instance.CloseMenu();
         SaveManager.instance.ClearRegisters();
-        SaveManager.instance.ChangeScenes(newSave:false);
+        loadSave = true;
+        StartCoroutine(MenuManager.instance.LoadSceneRoutine("Game", OnGameSceneLoaded));
+    }
+
+    private void OnIntroSceneLoaded(Scene scene, LoadSceneMode mode) {
+        SceneManager.sceneLoaded -= OnIntroSceneLoaded;
+        LoadingScript.instance.HideLoadScreen();
+        MenuManager.instance.CloseMenu();
+    }
+
+    private void OnGameSceneLoaded(Scene scene, LoadSceneMode mode) {
+        if (loadSave) {
+            SaveManager.instance.LoadGameData();
+        }
+        SceneManager.sceneLoaded -= OnGameSceneLoaded;
+        InputMapManager.instance.GetInputReferences();
+        LoadingScript.instance.HideLoadScreen();
+        MenuManager.instance.CloseMenu();
     }
 
     private void OnSettingsClick() {
         MenuManager.instance.OpenMenu(MenuType.Settings);
+    }
+
+    private void OnCreditsClick() {
+        MenuManager.instance.OpenMenu(MenuType.Credits);
     }
 
     public void OnExit() {

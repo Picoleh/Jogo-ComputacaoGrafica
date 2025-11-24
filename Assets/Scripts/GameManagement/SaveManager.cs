@@ -7,8 +7,6 @@ using UnityEngine.UIElements;
 
 public class SaveManager : MonoBehaviour{
     public static SaveManager instance;
-
-    private bool loadSave;
     private PlayerMovement player;
     private InventoryManager inventory;
     [SerializeField] private SettingsMenu settingsMenu;
@@ -20,7 +18,6 @@ public class SaveManager : MonoBehaviour{
             return;
         }
         instance = this;
-        loadSave = false;
         DontDestroyOnLoad(gameObject);
     }
 
@@ -81,52 +78,52 @@ public class SaveManager : MonoBehaviour{
         settingsMenu.SetData(configData);
     }
 
-    public void ChangeScenes(bool newSave) {
-        loadSave = !newSave;
-        StartCoroutine(LoadGameRoutine());
-    }
+    //public void ChangeScenes(bool newSave) {
+    //    loadSave = !newSave;
+    //    StartCoroutine(LoadGameRoutine());
+    //}
 
-    private IEnumerator LoadGameRoutine() {
-        // 1️ Mostrar tela de loading
-        LoadingScript.instance.ShowLoadScreen();
+    //private IEnumerator LoadGameRoutine() {
+    //    // 1️ Mostrar tela de loading
+    //    LoadingScript.instance.ShowLoadScreen();
 
-        // 2 Começar carregamento da cena
-        AsyncOperation async = SceneManager.LoadSceneAsync("Game");
-        async.allowSceneActivation = false;
+    //    // 2 Começar carregamento da cena
+    //    AsyncOperation async = SceneManager.LoadSceneAsync("Game");
+    //    async.allowSceneActivation = false;
 
-        // 3️ Atualizar barra de progresso
-        //while (async.progress < 0.9f) {
-        //    if (progressBar != null)
-        //        progressBar.value = async.progress / 0.9f;
-        //    yield return null;
-        //}
+    //    // 3️ Atualizar barra de progresso
+    //    //while (async.progress < 0.9f) {
+    //    //    if (progressBar != null)
+    //    //        progressBar.value = async.progress / 0.9f;
+    //    //    yield return null;
+    //    //}
 
-        while (async.progress < 0.9f) {
-            yield return null;
-        }
+    //    while (async.progress < 0.9f) {
+    //        yield return null;
+    //    }
         
-        // 4️(opcional) tempo mínimo de loading
-        yield return new WaitForSeconds(1f);
+    //    // 4️(opcional) tempo mínimo de loading
+    //    yield return new WaitForSeconds(1f);
 
 
-        // 6️ Ativar a nova cena
-        async.allowSceneActivation = true;
+    //    // 6️ Ativar a nova cena
+    //    async.allowSceneActivation = true;
 
-        SceneManager.sceneLoaded += OnSceneLoaded;
+    //    SceneManager.sceneLoaded += OnSceneLoaded;
 
-        // 5️ Restaurar dados (antes de ativar a cena)
+    //    // 5️ Restaurar dados (antes de ativar a cena)
 
-        // 7️ Esconder tela de loading
-        //if (loadingScreen != null)
-        //loadingScreen.SetActive(false);
-    }
+    //    // 7️ Esconder tela de loading
+    //    //if (loadingScreen != null)
+    //    //loadingScreen.SetActive(false);
+    //}
 
-    private void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
-        if (loadSave) {
-            LoadGameData();
-        }
-        SceneManager.sceneLoaded -= OnSceneLoaded;
-        InputMapManager.instance.GetInputReferences();
-        LoadingScript.instance.HideLoadScreen();
-    }
+    //private void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
+    //    if (loadSave) {
+    //        LoadGameData();
+    //    }
+    //    SceneManager.sceneLoaded -= OnSceneLoaded;
+    //    InputMapManager.instance.GetInputReferences();
+    //    LoadingScript.instance.HideLoadScreen();
+    //}
 }

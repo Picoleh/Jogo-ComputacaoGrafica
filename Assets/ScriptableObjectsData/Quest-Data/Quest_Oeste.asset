@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _completed: 1
   id: 1
-  questTitle: where did i leave it?
-  description: ooo meu fi kd
+  questTitle: "Qual \xE9 a senha?"
+  description: Encontre os 4 itens marcados com a senha
   questDialogue: {fileID: 11400000, guid: ee6576a8c51f57a4b82ca570251d332b, type: 2}
   comebackInProgress: {fileID: 11400000, guid: cedec04f38ca11040b7b766bc842214d, type: 2}
   comebackFinished: {fileID: 11400000, guid: ce9f974b295eaf342b01cf168c7aba55, type: 2}

@@ -14,6 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lines:
   - speaker: 0
-    text: Mucho tanks
+    text: "Nossa muito obrigada! Agora \xE9 s\xF3 descobrir qual a sequ\xEAncia correta
+      dos n\xFAmeros e eu poderei trabalhar."
+  - speaker: 0
+    text: " Ah, voc\xEA precisa de um circuito, \xE9 isso? Hoje \xE9 seu dia de sorte!"
   - speaker: 1
-    text: yiipeee
+    text: "(Sons de rob\xF4)"

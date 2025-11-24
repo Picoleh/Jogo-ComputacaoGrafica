@@ -10,12 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0f6a420a48fc96e428a402a5ca8a3fb8, type: 3}
-  m_Name: Finished_Sul_Dialogue
+  m_Name: Slide1_Dialogue
   m_EditorClassIdentifier: 
   lines:
   - speaker: 0
-    text: "Valeuuu carinha! Se liga nesse neg\xF3cio super maneiro que achamos na
-      coleta."
+    text: Era uma vez
   - speaker: 0
-    text: "N\xE3o sei se voc\xEA vai precisar, mas \xE9 uma forma de agradecer a
-      ajuda."
+    text: uma terra muitosidosid

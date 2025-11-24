@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _completed: 1
   id: 2
-  questTitle: Turturafa
-  description: planta as badnmdeira
+  questTitle: Sinalizar ninhos de tartaruga
+  description: Coloque as bandeiras nos locais indicados
   questDialogue: {fileID: 11400000, guid: 7ecb1fb992e17054fba6209d24069f47, type: 2}
   comebackInProgress: {fileID: 11400000, guid: e89cb7c9ec921b74ba7bb0653411eaeb, type: 2}
   comebackFinished: {fileID: 11400000, guid: 9a2767902115fad458d2973260516956, type: 2}
   itemReward: {fileID: 11400000, guid: b75255f7f38282c49baf965f97bc863b, type: 2}
-  promptOnTarget: Bande
+  promptOnTarget: Sinalizar
   messageInteractedTarget: Bandeira colocada
   spawnAtTarget: {fileID: 1338853173686501506, guid: 81bcf1fffb8d02e4b9200e6c633d206d, type: 3}
   prefabsTarget:

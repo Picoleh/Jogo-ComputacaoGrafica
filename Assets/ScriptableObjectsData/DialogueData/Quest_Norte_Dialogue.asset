@@ -14,6 +14,42 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lines:
   - speaker: 0
-    text: opa mermao, SO?
+    text: "Est\xE1vamos te esperando!"
+  - speaker: 0
+    text: "Robozinho, eu pe\xE7o sua ajuda com um pequeno problema na nossa propriedade."
   - speaker: 1
-    text: bop
+    text: "(Sons de rob\xF4)"
+  - speaker: 0
+    text: "Como voc\xEA pode ver, estamos na fase final da implementa\xE7\xE3o de
+      uma agrofloresta."
+  - speaker: 0
+    text: "Plantamos essas \xE1rvores todas ao redor para tornar um pouco mais sustent\xE1vel
+      nossa produ\xE7\xE3o."
+  - speaker: 0
+    text: "Ali a gente planta frut\xEDferas e culturas que precisam de sombra para
+      produzir num geral, tipo cacau!"
+  - speaker: 0
+    text: "Bem, quanto a essa parte central com o pasto e a planta\xE7\xE3o enorme...."
+  - speaker: 0
+    text: "Eu ainda n\xE3o convenci o Sr.Semente a ceder pelo menos um peda\xE7o
+      do terreno para mudar o cultivo."
+  - speaker: 0
+    text: Bom, temos que nos atualizar...
+  - speaker: 0
+    text: "Olhando pelo lado bom, com essa planta al\xE9m de alimento conseguimos
+      um combust\xEDvel ecol\xF3gico bem eficiente!"
+  - speaker: 0
+    text: "Ah \xE9 mesmo! O problema \xE9 o seguinte: estamos mudando as vacas desse
+      pasto para o pasto da agrofloresta, "
+  - speaker: 0
+    text: "a sombra das \xE1rvores \xE9 mais confort\xE1vel pro gado."
+  - speaker: 0
+    text: "S\xF3 que uma delas, a Zelda, est\xE1 sumida, ela fugiu ontem e n\xE3o
+      achamos ela at\xE9 agora!"
+  - speaker: 0
+    text: "Se voc\xEA avist\xE1-la, avise pra gente onde ela est\xE1 e te oferecemos
+      uma recompensa!"
+  - speaker: 1
+    text: "(Sons de rob\xF4)"
+  - speaker: 0
+    text: "Neg\xF3cio fechado! Encontre a Zelda e te entrego o combust\xEDvel."

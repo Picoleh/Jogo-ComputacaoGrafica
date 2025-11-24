@@ -14,6 +14,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lines:
   - speaker: 0
-    text: pode marcar as tartaruads
+    text: ' Eaiiiii tio!'
   - speaker: 1
-    text: booop beebop
+    text: "(Sons de rob\xF4)"
+  - speaker: 0
+    text: "Curtindo a praia? \xC9 muito legal ficar por aqui, n\xE9. Eu e minha galera
+      somos surfistas, est\xE1vamos limpando a praia essa semana."
+  - speaker: 0
+    text: "Depois que instalaram aquela m\xE1quina gigante, veio um monte de tralha
+      pl\xE1stica pra c\xE1 de novo\u2026 agora que est\xE1vamos vendo progresso..."
+  - speaker: 1
+    text: "(Sons de rob\xF4)"
+  - speaker: 0
+    text: "Mas antes mesmo do pl\xE1stico voltar, quando a praia ainda estava totalmente
+      limpa, j\xE1 haviam voltado alguns animais marinhos!"
+  - speaker: 0
+    text: "Todos da comunidade est\xE3o com medo de que com essa sujeira toda voltando,
+      eles v\xE3o ir embora de novo\u2026"
+  - speaker: 1
+    text: "(Sons de rob\xF4)"
+  - speaker: 0
+    text: "Pois \xE9, mas temos boas not\xEDcias tamb\xE9m! Ontem \xE0 noite algu\xE9m
+      avistou umas tartarugas na areia, achamos que elas deixaram ovos!"
+  - speaker: 0
+    text: Agora precisamos de ajuda para interditar a praia e sinalizar esses ninhos.
+      Topa nos ajudar?
+  - speaker: 1
+    text: "(Sons de rob\xF4)"
+  - speaker: 0
+    text: "Maneiiiirooo!!! Voc\xEA coloca essas bandeirinhas no local dos ninhos
+      enquanto eu e a minha galera recolhemos o lixo."

@@ -26836,7 +26836,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 3b4062b93458f714b87488e6cbe5483c, type: 3}
       propertyPath: m_Name
-      value: Juliana
+      value: Roberta
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 3b4062b93458f714b87488e6cbe5483c, type: 3}
       propertyPath: m_Layer
@@ -28365,7 +28365,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25e541f680055454e84e1a529eac0c0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _npcName: Juliana
+  _npcName: Roberta
   _prompt: Conversar
   _quest: {fileID: 11400000, guid: dbeef488a647c04459462503ee21f6c7, type: 2}
   _animator: {fileID: 1179782342}
@@ -47801,7 +47801,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 885fc009388141b4689b99cfadde07e1, type: 3}
       propertyPath: m_Name
-      value: Female_Casual
+      value: Juliana
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

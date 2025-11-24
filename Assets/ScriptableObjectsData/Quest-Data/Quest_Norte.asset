@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _completed: 1
   id: 3
-  questTitle: As casas se movem?
-  description: Uma pintola uma uma uma uma
+  questTitle: As vacas se movem?
+  description: "Ache a vaca e retorne para a Agr\xF4noma!"
   questDialogue: {fileID: 11400000, guid: d494693209ad8054084fb61bac0ca569, type: 2}
   comebackInProgress: {fileID: 11400000, guid: 9e75d80097512bd4097aef6da2cbe5bc, type: 2}
   comebackFinished: {fileID: 11400000, guid: ad02387bd21c87842beeec532ff2210d, type: 2}

@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _completed: 0
   id: 0
-  questTitle: Salvar a earth
-  description: Colete os trens itens o mais rapido possible
+  questTitle: "O imp\xE9rio contra ataca!"
+  description: "Encontre os itens necess\xE1rios para o dispositivo do Dr. Tonclay!\n\n-
+    Chip de controle\n- Combust\xEDvel\n- Explosivo"
   questDialogue: {fileID: 11400000, guid: 4033edd8af71c254480990ba0fbb5567, type: 2}
   comebackInProgress: {fileID: 11400000, guid: 3d9f17a25fd49d04381ea621d4e59109, type: 2}
   comebackFinished: {fileID: 11400000, guid: 46e2c2e8b4ee57347a437907cf53053b, type: 2}

@@ -61,7 +61,7 @@ public class DialogueSystem : MonoBehaviour {
 
         
         DialogueLine sentence = sentences.Dequeue();
-        _textName.text = sentence.speaker == DialogueLine.Speaker.NPC ? currentNPCName : "Beet";
+        _textName.text = sentence.speaker == DialogueLine.Speaker.NPC ? currentNPCName : "Bud";
 
         typingCoroutine = StartCoroutine(TypeSentence(sentence.text));
 
