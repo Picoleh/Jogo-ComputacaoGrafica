@@ -1,9 +1,5 @@
-using System;
 using TMPro;
-using TMPro.EditorUtilities;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class SettingsMenu : MenuBase, ISaveable

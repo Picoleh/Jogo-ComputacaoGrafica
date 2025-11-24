@@ -51,7 +51,9 @@ public class SaveManager : MonoBehaviour{
             nPCDatas.Add(n.GetData() as NPCData);
         }
 
-        SaveSystem.Save(new GameData(playerData, inventoryData, nPCDatas));
+        MenuData menuData = MenuManager.instance.GetData() as MenuData;
+
+        SaveSystem.Save(new GameData(playerData, inventoryData, nPCDatas, menuData));
     }
 
     public void SaveConfig() {
@@ -67,6 +69,8 @@ public class SaveManager : MonoBehaviour{
         for (int i = 0; i < npcs.Count; i++) {
             npcs[i].SetData(gameData.npcData[i]);
         }
+
+        MenuManager.instance.SetData(gameData.menuData);
     }
 
     public void LoadConfigData() {

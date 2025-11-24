@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cee28758dda6d3c429bd1ea77db61bb6, type: 3}
-  m_Name: AutoDirecionador
+  m_Name: "N\xFAcleo de Jajavium"
   m_EditorClassIdentifier: 
-  itemName: AutoDirecionador
-  itemDescription: 
-  icon: {fileID: 0}
+  itemName: Nucleo de Jajavium
+  itemDescription: "N\xFAcleo inst\xE1vel fundido a partir de um material misterioso
+    incapaz de ser filtrado. (Pode ser usado em explosivos n\xE3o poluentes). "
+  icon: {fileID: 21300000, guid: ebe63ae01cde77948a6ff69e470805da, type: 3}

@@ -13,7 +13,7 @@ public enum MenuType {
     GameOver
 }
 
-public class MenuManager : MonoBehaviour
+public class MenuManager : MonoBehaviour, ISaveable
 {
     public static MenuManager instance;
 
@@ -75,7 +75,7 @@ public class MenuManager : MonoBehaviour
     }
 
     public void ResumeBatteryConsume() {
-        batteryManager.SetUsing(false);
+        batteryManager.SetUsing(true);
     }
 
     public void GoBack() {
@@ -87,4 +87,12 @@ public class MenuManager : MonoBehaviour
         }
     }
 
+    public object GetData() {
+        return new MenuData(Mathf.Round(batteryManager.currentBattery));
+    }
+
+    public void SetData(object data) {
+        MenuData menuData = (MenuData)data;
+        batteryManager.currentBattery = menuData.batteryLevel;
+    }
 }

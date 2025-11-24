@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cee28758dda6d3c429bd1ea77db61bb6, type: 3}
-  m_Name: CanWithNumber
+  m_Name: Auto-Direcionador
   m_EditorClassIdentifier: 
-  itemName: Can of soda
-  itemDescription: numbverr
-  icon: {fileID: 0}
+  itemName: Auto-Direcionador
+  itemDescription: "Placa de circuito integrado capaz de controlar dispositivos e
+    identificar alvos. (Pe\xE7a essencial para a constru\xE7\xE3o de um foguete)."
+  icon: {fileID: 21300000, guid: b40397b0a38d00040a05aa3cf55a815d, type: 3}

@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cee28758dda6d3c429bd1ea77db61bb6, type: 3}
-  m_Name: Gasoline-Info
+  m_Name: Lata de refrigerante
   m_EditorClassIdentifier: 
-  itemName: "Combust\xEDvel Especial"
-  itemDescription: Bota no carro
-  icon: {fileID: 21300000, guid: a5d15594cde3f31409fe7649f552283b, type: 3}
+  itemName: Lata de refrigerante
+  itemDescription: "Lata de refrigerante com um n\xFAmero escrito nela (pode ser
+    parte de uma senha)"
+  icon: {fileID: 21300000, guid: 63824d25955c44348b9697b7e845cad0, type: 3}
