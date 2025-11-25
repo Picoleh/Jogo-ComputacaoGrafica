@@ -9,6 +9,7 @@ public abstract class Walker : MonoBehaviour
     [SerializeField] private float arriveTreshhold = 0.3f;
     [SerializeField] private float rotationSpeed = 1.0f;
     [SerializeField] protected Animator animator;
+    [SerializeField] protected bool autoStart;
 
     protected Transform[] waypoints;
     protected int currentIndex = 0;
@@ -18,6 +19,9 @@ public abstract class Walker : MonoBehaviour
     private void Awake() {
         waypoints = waypointsRoot.GetComponentsInChildren<Transform>();
         waypoints = waypoints.Where(t => t != waypointsRoot).ToArray(); // ignora o próprio root
+
+        if(autoStart)
+            startWalker();
     }
 
     protected virtual void Update() {
@@ -30,7 +34,7 @@ public abstract class Walker : MonoBehaviour
         started = true;
     }
 
-    protected void Move() {
+    protected virtual void Move() {
         if (waypoints == null || waypoints.Length == 0) 
             return;
 
@@ -54,7 +58,7 @@ public abstract class Walker : MonoBehaviour
 
 
         if (Vector3.Distance(transform.position, target.position) <= arriveTreshhold) {
-            Debug.Log("Chegou");
+            OnCheckpoint();
             currentIndex = GetNextIndex();
             if(currentIndex == -1) {
                 Arrived();
@@ -75,4 +79,6 @@ public abstract class Walker : MonoBehaviour
         arrived = true;
         animator.SetTrigger("Idle");
     }
+
+    protected abstract void OnCheckpoint();
 }

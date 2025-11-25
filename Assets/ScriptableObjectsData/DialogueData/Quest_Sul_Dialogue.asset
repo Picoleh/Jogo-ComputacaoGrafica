@@ -19,18 +19,23 @@ MonoBehaviour:
     text: "(Sons de rob\xF4)"
   - speaker: 0
     text: "Curtindo a praia? \xC9 muito legal ficar por aqui, n\xE9. Eu e minha galera
-      somos surfistas, est\xE1vamos limpando a praia essa semana."
+      est\xE1vamos limpando a praia essa semana."
   - speaker: 0
     text: "Depois que instalaram aquela m\xE1quina gigante, veio um monte de tralha
-      pl\xE1stica pra c\xE1 de novo\u2026 agora que est\xE1vamos vendo progresso..."
+      pl\xE1stica pra c\xE1 de novo, "
+  - speaker: 0
+    text: "justo agora que est\xE1vamos vendo progresso no programa Sem Lixo Na Praia."
+  - speaker: 0
+    text: "Eu e meus parceiros temos a teoria de que est\xE3o depositando o lixo
+      das col\xF4nias extraterrestres aqui."
   - speaker: 1
     text: "(Sons de rob\xF4)"
+  - speaker: 1
+    text: Quando a praia ainda estava totalmente limpa, alguns animais marinhos voltaram
+      a ser vistos por aqui!
   - speaker: 0
-    text: "Mas antes mesmo do pl\xE1stico voltar, quando a praia ainda estava totalmente
-      limpa, j\xE1 haviam voltado alguns animais marinhos!"
-  - speaker: 0
-    text: "Todos da comunidade est\xE3o com medo de que com essa sujeira toda voltando,
-      eles v\xE3o ir embora de novo\u2026"
+    text: "Mas agora, n\xF3s aqui da vila estamos com medo de que com essa sujeira,
+      eles v\xE3o embora de novo\u2026"
   - speaker: 1
     text: "(Sons de rob\xF4)"
   - speaker: 0
@@ -43,4 +48,4 @@ MonoBehaviour:
     text: "(Sons de rob\xF4)"
   - speaker: 0
     text: "Maneiiiirooo!!! Voc\xEA coloca essas bandeirinhas no local dos ninhos
-      enquanto eu e a minha galera recolhemos o lixo."
+      enquanto eu e meus amigos limpamos a praia."

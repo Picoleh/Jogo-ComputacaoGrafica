@@ -14,6 +14,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lines:
   - speaker: 0
-    text: Era uma vez
+    text: "Devido \xE0 explora\xE7\xE3o abusiva dos recursos naturais e conforme
+      as mudan\xE7as clim\xE1ticas foram avan\xE7ando"
   - speaker: 0
-    text: uma terra muitosidosid
+    text: "a humanidade viu seu fim chegando cada vez mais r\xE1pido. "
+  - speaker: 0
+    text: "Ent\xE3o, os habitantes rica\xE7os da antiga Capital resolveram se mandar
+      pra Marte, mas deixaram o resto da popula\xE7\xE3o \xE0 pr\xF3pria sorte."
+  - speaker: 0
+    text: "No entanto, uma pequena parcela da popula\xE7\xE3o restante conseguiu
+      recuperar esse pedacinho da Terra"
+  - speaker: 0
+    text: "e est\xE3o vivendo nas proximidades da Nova Capital."
+  - speaker: 0
+    text: "Como nem tudo s\xE3o flores, os colonos de Marte descobriram e instalaram
+      uma m\xE1quina chamada Extrator3000 para"
+  - speaker: 0
+    text: "coletar nossos poucos recursos naturais restantes e mandar pra col\xF4nia
+      de Marte!"
+  - speaker: 0
+    text: "Com isso, surgiram novos problemas na Nova Capital e comunidades pr\xF3ximas."
+  - speaker: 0
+    text: "Os habitantes t\xEAm medo de tudo voltar a ser como era e isso ficar inabit\xE1vel
+      antes mesmo do que prev\xEDamos\u2026"

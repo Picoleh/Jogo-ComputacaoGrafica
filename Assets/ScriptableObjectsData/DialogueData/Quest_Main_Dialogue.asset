@@ -13,60 +13,33 @@ MonoBehaviour:
   m_Name: Quest_Main_Dialogue
   m_EditorClassIdentifier: 
   lines:
-  - speaker: 0
-    text: ESTA VIVO!!!
   - speaker: 1
     text: "(Sons de rob\xF4)"
   - speaker: 0
     text: "J\xE1 que deve estar me ouvindo, vou me apresentar."
   - speaker: 0
-    text: "Eu sou o Dr. Tonclay, e te criei com o prop\xF3sito de ajudar todas as
-      comunidades pr\xF3ximas nesse momento dif\xEDcil que estamos passando."
+    text: "Eu sou o dr. Tonclay, e te criei com o prop\xF3sito de ajudar todas as
+      comunidades pr\xF3ximas com os problemas que estamos enfrentando."
   - speaker: 1
     text: "(Sons de rob\xF4)"
   - speaker: 0
-    text: "Vou te explicar: Ali ao leste era a antiga Capital, s\xF3 moravam os ricassos
-      l\xE1."
-  - speaker: 0
-    text: "Devido \xE0 explora\xE7\xE3o abusiva dos recursos naturais pr\xF3ximos
-      e conforme as mudan\xE7as clim\xE1ticas foram avan\xE7ando,"
-  - speaker: 0
-    text: " a humanidade viu seu fim chegando cada vez mais r\xE1pido."
-  - speaker: 0
-    text: "Ent\xE3o, eles resolveram se mandar pra Marte, mas deixaram o resto de
-      n\xF3s \xE0 pr\xF3pria sorte."
-  - speaker: 0
-    text: Acontece que conseguimos recuperar esse pedacinho da terra e estamos vivendo
-      aqui.
-  - speaker: 0
-    text: " Eles descobriram e agora est\xE3o atr\xE1s dos nossos recursos naturais!"
-  - speaker: 0
-    text: "Mandaram instalar aquela m\xE1quina gigante, chamada de Extrator3000 que
-      est\xE1 retirando tudo da terra e mandando pra col\xF4nia em Marte."
-  - speaker: 0
-    text: "E por isso estamos enfrentando v\xE1rios problemas aqui na Nova Capital
-      e comunidades pr\xF3ximas! "
-  - speaker: 0
-    text: "Temos medo de tudo voltar a ser como era e isso ficar inabit\xE1vel antes
-      mesmo do que prev\xEDamos."
-  - speaker: 0
-    text: "Mas nem tudo est\xE1 perdido! Tive a ideia de construir um dispositivo
-      pra destruir o Extrator3000 e impedir que roubem mais."
+    text: "Nem tudo est\xE1 perdido! Tive a ideia de construir um dispositivo pra
+      destruir o Extrator3000."
   - speaker: 0
     text: "Mas para isso, preciso dos materiais necess\xE1rios O QUANTO ANTES! Voc\xEA
       pode ajudar n\xE9?"
   - speaker: 1
-    text: "(Sons de rob\xF4)"
+    text: "(Sons de rob\xF4)\r\n"
   - speaker: 0
     text: "Que bom! Eu te programei pra responder isso, na verdade. Esta \xE9 a sua
-      miss\xE3o! "
+      miss\xE3o!"
   - speaker: 0
     text: "Tem uma pequena lista implantada na sua mem\xF3ria com os itens desejados."
   - speaker: 0
     text: "Me traga o MAIS R\xC1PIDO POSS\xCDVEL, ANTES QUE SUA BATERIA ACABE! Aperte
-      TAB para conferir sua bateria."
-  - speaker: 0
-    text: "(Sons de rob\xF4)"
+      ESC ou M para conferir sua bateria.\r\n"
+  - speaker: 1
+    text: "(Sons de rob\xF4)\r\n"
   - speaker: 0
     text: "Ah \xE9! Pra come\xE7ar, acho que voc\xEA poderia falar com a Roberta
       em O\xE1sis, siga o caminho por tr\xE1s dos laborat\xF3rios. Good luck!"

@@ -12,4 +12,7 @@ public class WalkerEnd : Walker {
         base.Arrived();
         transform.Rotate(0, rotationCorrection, 0);
     }
+
+    protected override void OnCheckpoint() {
+    }
 }
