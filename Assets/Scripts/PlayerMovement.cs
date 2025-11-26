@@ -35,7 +35,6 @@ public class PlayerMovement : MonoBehaviour, ISaveable{
     }
 
     void Update(){
-        //Debug.Log(inputActions.FindActionMap("Gameplay").enabled);
         if (Mathf.Abs(rotateInput) > 0.01f) { // Testa se há input de rotação
             // Aplica penalização se estiver correndo
             float rotationPenalty = isSprinting ? 0.4f : 1.0f; 
@@ -81,7 +80,7 @@ public class PlayerMovement : MonoBehaviour, ISaveable{
         }
 
         animator.SetFloat("Speed", currentSpeed);
-        if(currentSpeed > maxMoveSpeed) {
+        if(currentSpeed > maxMoveSpeed + 2f) {
             SoundManager.instance.PlayLoop("RoboCorrendo");
         }
         else if(currentSpeed > 1.0f) {

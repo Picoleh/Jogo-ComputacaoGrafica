@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27b59d6df643df945a2fc0657b743ff4, type: 3}
   m_Name: Quest_Norte
   m_EditorClassIdentifier: 
-  _completed: 1
+  _completed: 0
   id: 3
   questTitle: As vacas se movem?
   description: "Ache a vaca e retorne para a Agr\xF4noma!"

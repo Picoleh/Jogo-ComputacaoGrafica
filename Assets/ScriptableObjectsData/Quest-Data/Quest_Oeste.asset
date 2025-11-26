@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 622d4f87393e5954999b8b9b0beeb32b, type: 3}
   m_Name: Quest_Oeste
   m_EditorClassIdentifier: 
-  _completed: 1
+  _completed: 0
   id: 1
   questTitle: "Qual \xE9 a senha?"
   description: Encontre os 4 itens marcados com a senha

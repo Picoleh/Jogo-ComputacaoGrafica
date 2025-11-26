@@ -3,7 +3,12 @@ guid: 5b6d4c75cd35c4c4283054092f5e4c90
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Led Olho
+    second: {fileID: 2100000, guid: f53e73c2bf59dd7489ba73915020704f, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 
 public class SoundManager : MonoBehaviour
@@ -19,6 +20,7 @@ public class SoundManager : MonoBehaviour
     [SerializeField] private List<AudioClip> loopClips;
     [SerializeField] private List<AudioClip> musicClips;
     [SerializeField] private List<AudioClip> ambientClips;
+    [SerializeField] private AudioClip easterEggSong;
 
     private AudioClip lastMusic;
     private AudioClip lastAmbient;
@@ -71,7 +73,7 @@ public class SoundManager : MonoBehaviour
         int r;
         do {
             r = Random.Range(0, ambientClips.Count);
-        } while (ambientClips[r] == lastMusic);
+        } while (ambientClips[r] == lastAmbient);
 
         lastAmbient = ambientClips[r];
         ambientSource.clip = ambientClips[r];
@@ -89,6 +91,33 @@ public class SoundManager : MonoBehaviour
         lastMusic = musicClips[r];
         musicSource.clip = musicClips[r];
         musicSource.Play();
+    }
+
+    public void PlayEasterEggMusic() {
+        musicSource.clip = easterEggSong;
+        StartCoroutine(StartEasterEggMusic(OnFinishEasterEggSong));
+    }
+
+    private IEnumerator StartEasterEggMusic(System.Action onFinishEasterEggSong) {
+        musicSource.Stop();
+        ambientSource.Stop();
+        loopSource.volume = 0f;
+        sfxSource.volume = 0f;
+        musicSource.Play();
+        StartCoroutine(FadeIn(musicSource, ambientVolume));
+
+        while (!musicSource.isPlaying)
+            yield return null;
+
+        while (musicSource.isPlaying)
+            yield return null;
+
+        onFinishEasterEggSong?.Invoke();
+    }
+
+    private void OnFinishEasterEggSong() {
+        loopSource.volume = sfxVolume;
+        sfxSource.volume = sfxVolume;
     }
 
     public void PlaySFX(string clipName) {
@@ -136,7 +165,6 @@ public class SoundManager : MonoBehaviour
         }
 
         source.volume = 0f;
-        source.Stop();
 
         isFading = false;
     }

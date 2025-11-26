@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Slide2
   m_EditorClassIdentifier: 
   image: {fileID: 21300000, guid: 7bbedf94123d8d3489190c808c21e914, type: 3}
-  lines: {fileID: 11400000, guid: 652e3987ae3d0154ca461ab88f0d466e, type: 2}
+  lines: {fileID: 11400000, guid: 58ef0dd58389ce344b83d1948ca3898d, type: 2}

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 
 public class DialogueSystem : MonoBehaviour {
@@ -16,8 +17,10 @@ public class DialogueSystem : MonoBehaviour {
     [SerializeField] private TextMeshProUGUI _textSentence;
     [SerializeField] private float typingSpeed = 0.03f; // tempo entre letras
     [SerializeField] private const int maxCharByPage = 60;
+    [SerializeField] private AudioClip budClip;
     private bool isTyping = false;
     private string currentNPCName;
+    private AudioClip currentNPCVoice;
 
     public event Action OnDialogueEnd;
 
@@ -32,7 +35,7 @@ public class DialogueSystem : MonoBehaviour {
         _dialogueCanvas.SetActive(false);
     }
 
-    public void StartDialogue(string npcName, Dialogue dialogue) {
+    public void StartDialogue(string npcName, Dialogue dialogue, AudioClip npcVoice) {
         InputMapManager.instance.EnableMap("Dialogue");
         MenuManager.instance.StopBatteryConsume();
         sentences.Clear();
@@ -42,6 +45,7 @@ public class DialogueSystem : MonoBehaviour {
 
         _dialogueCanvas.SetActive(true);
         currentNPCName=npcName;
+        currentNPCVoice = npcVoice;
         DisplayNextSentence();
     }
 
@@ -62,12 +66,12 @@ public class DialogueSystem : MonoBehaviour {
         
         DialogueLine sentence = sentences.Dequeue();
         _textName.text = sentence.speaker == DialogueLine.Speaker.NPC ? currentNPCName : "Bud";
-
-        typingCoroutine = StartCoroutine(TypeSentence(sentence.text));
+        AudioClip blip = sentence.speaker == DialogueLine.Speaker.NPC ? currentNPCVoice : budClip;
+        typingCoroutine = StartCoroutine(TypeSentence(sentence.text, blip));
 
     }
 
-    private IEnumerator TypeSentence(string sentence) {
+    private IEnumerator TypeSentence(string sentence, AudioClip blip) {
         isTyping = true;
         _textSentence.text = sentence;
         _textSentence.ForceMeshUpdate();                
@@ -81,6 +85,12 @@ public class DialogueSystem : MonoBehaviour {
         while (count < totalVisible) {
             count++;
             _textSentence.maxVisibleCharacters = count;
+
+            char c = sentence[count - 1];
+            if (!char.IsWhiteSpace(c)) {
+                SoundManager.instance.PlaySFX(blip);
+            }
+
             yield return new WaitForSeconds(typingSpeed);
         }
 

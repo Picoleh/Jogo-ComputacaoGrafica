@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lines:
   - speaker: 0
-    text: Opaa, expanda rapaz
-  - speaker: 1
-    text: bii
+    text: Ola caro agente inteligente.
   - speaker: 0
-    text: perceba
+    text: "Expanda, legion\xE1rio! E perceba! Assim derrotar\xE1s o antic\xF3digo!"
+  - speaker: 1
+    text: "(Sons exp\xE2nsonicos de rob\xF4)"

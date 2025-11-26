@@ -35,10 +35,10 @@ public class Interactor : MonoBehaviour{
 
     public void OnInteract() {
         if (_numFound > 0) {
-            SoundManager.instance.PlaySFX("SomRobo4");
             var interactable = colliders[0].GetComponent<IInteractable>();
             if (interactable != null) {
-                if (interactable is NPC) {
+                if (interactable is not NPC) {
+                    SoundManager.instance.PlaySFX("SomRobo4");
                 }
                 else if(interactable is Item) {
                     animator.SetTrigger("Interact");

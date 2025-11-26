@@ -11,6 +11,7 @@ public class SlideManager : MonoBehaviour
     [SerializeField] private List<SlideInfo> slides;
     [SerializeField] private Image bg;
     [SerializeField] private Image fade;
+    [SerializeField] private AudioClip tonclayVoice;
 
     private int slideIndex = -1;
 
@@ -48,7 +49,7 @@ public class SlideManager : MonoBehaviour
 
         // Mostra diálogo
         yield return new WaitForSeconds(1f);
-        DialogueSystem.instance.StartDialogue("Tonclay", slideInfo.lines);
+        DialogueSystem.instance.StartDialogue("Tonclay", slideInfo.lines, tonclayVoice);
         DialogueSystem.instance.OnDialogueEnd += NextSlide;
     }
 

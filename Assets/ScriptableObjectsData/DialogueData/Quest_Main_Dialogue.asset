@@ -13,12 +13,14 @@ MonoBehaviour:
   m_Name: Quest_Main_Dialogue
   m_EditorClassIdentifier: 
   lines:
+  - speaker: 0
+    text: "EST\xC1 VIVO!!!"
   - speaker: 1
     text: "(Sons de rob\xF4)"
   - speaker: 0
     text: "J\xE1 que deve estar me ouvindo, vou me apresentar."
   - speaker: 0
-    text: "Eu sou o dr. Tonclay, e te criei com o prop\xF3sito de ajudar todas as
+    text: "Eu sou o Dr. Tonclay, e te criei com o prop\xF3sito de ajudar todas as
       comunidades pr\xF3ximas com os problemas que estamos enfrentando."
   - speaker: 1
     text: "(Sons de rob\xF4)"

@@ -8,6 +8,7 @@ public class NPC : MonoBehaviour, IInteractable, ISaveable{
     [SerializeField] private QuestBase _quest;
     [SerializeField] private Animator _animator;
     [SerializeField] private Walker _walker;
+    [SerializeField] private AudioClip _voice;
     private bool _firstInteraction = true;
 
     public string interactionPrompt => _prompt;
@@ -21,7 +22,7 @@ public class NPC : MonoBehaviour, IInteractable, ISaveable{
     public void Interact(Interactor interactor) {
         _animator.SetTrigger("Interacted");
         if (_firstInteraction) { 
-            DialogueSystem.instance.StartDialogue(_npcName, _quest.questDialogue);
+            DialogueSystem.instance.StartDialogue(_npcName, _quest.questDialogue, _voice);
 
             if(_walker != null)
                 DialogueSystem.instance.OnDialogueEnd += BeginWalker;
@@ -30,7 +31,7 @@ public class NPC : MonoBehaviour, IInteractable, ISaveable{
                 _quest.StartQuest();
         }
         else {
-            DialogueSystem.instance.StartDialogue(_npcName, _quest.getCombackDialog());
+            DialogueSystem.instance.StartDialogue(_npcName, _quest.getCombackDialog(), _voice);
         }
 
     }
@@ -48,9 +49,16 @@ public class NPC : MonoBehaviour, IInteractable, ISaveable{
         NPCData nPCData = (NPCData)data;
 
         _firstInteraction = nPCData.firstInteraction;
+        _quest._completed = nPCData.questCompleted;
 
-        if (!_firstInteraction && !_quest._completed) { 
-            _quest.RedoQuest();
+        if (!_firstInteraction) {
+            if(_npcName == "Tonclay") {
+                transform.position = new Vector3(48f, 0f, -33.75f);
+                transform.Rotate(0f, 56.25f, 0f);
+            }
+
+            else if(!_quest._completed)
+                _quest.RedoQuest();
         }
     }
 }

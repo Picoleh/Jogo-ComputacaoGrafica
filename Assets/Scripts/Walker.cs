@@ -7,7 +7,7 @@ public abstract class Walker : MonoBehaviour
     [SerializeField] protected Transform waypointsRoot;
     [SerializeField] private float speed = 2f;
     [SerializeField] private float arriveTreshhold = 0.3f;
-    [SerializeField] private float rotationSpeed = 1.0f;
+    [SerializeField] private float rotationSpeed = 3.0f;
     [SerializeField] protected Animator animator;
     [SerializeField] protected bool autoStart;
 

@@ -315,7 +315,8 @@ MonoBehaviour:
   _dialogueCanvas: {fileID: 1738227151}
   _textName: {fileID: 1791642693}
   _textSentence: {fileID: 1354891520}
-  typingSpeed: 0.01
+  typingSpeed: 0.05
+  budClip: {fileID: 0}
 --- !u!114 &195387405
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -333,6 +334,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6547bb138f0672f4695f52a7c91eeb0f, type: 2}
   bg: {fileID: 127656352}
   fade: {fileID: 955359977}
+  tonclayVoice: {fileID: 8300000, guid: 56ebbd4a807e4b349803865ab5a0107f, type: 3}
 --- !u!1 &485442869
 GameObject:
   m_ObjectHideFlags: 0

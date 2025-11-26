@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27b59d6df643df945a2fc0657b743ff4, type: 3}
   m_Name: Quest_Sul
   m_EditorClassIdentifier: 
-  _completed: 1
+  _completed: 0
   id: 2
   questTitle: Sinalizar ninhos de tartaruga
   description: Coloque as bandeiras nos locais indicados
