@@ -1258,7 +1258,7 @@ MonoBehaviour:
   _quest: {fileID: 11400000, guid: 7eb7844dbfa63d749898139dee38e4cb, type: 2}
   _animator: {fileID: 59057541}
   _walker: {fileID: 0}
-  _voice: {fileID: 0}
+  _voice: {fileID: 8300000, guid: 83b3f2787dcc610409dc6c26a8462e82, type: 3}
 --- !u!4 &65063073 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7917689197977122268, guid: 3fbfbf3a4b39c85408a9b7b298a3eca5, type: 3}
@@ -5634,7 +5634,7 @@ MonoBehaviour:
   _quest: {fileID: 11400000, guid: e9d3378966827a84a80b41dd77e5957e, type: 2}
   _animator: {fileID: 273533626}
   _walker: {fileID: 0}
-  _voice: {fileID: 0}
+  _voice: {fileID: 8300000, guid: 3c171fe9528f9da40bc37f4a43bd3b09, type: 3}
 --- !u!65 &273533625
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15230,7 +15230,7 @@ Transform:
   m_GameObject: {fileID: 604253642}
   serializedVersion: 2
   m_LocalRotation: {x: 0.081391595, y: -2.935158e-22, z: 2.3969245e-23, w: 0.9966822}
-  m_LocalPosition: {x: -248.3, y: 8.488191, z: 46.46074}
+  m_LocalPosition: {x: 74.98, y: 2.2021909, z: 93.37074}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16963,7 +16963,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _npcName: SUP
   dialogue: {fileID: 11400000, guid: 652e3987ae3d0154ca461ab88f0d466e, type: 2}
-  _voice: {fileID: 0}
+  _voice: {fileID: 8300000, guid: 77ffaad51f7b2ad41b89b63bf95d36e8, type: 3}
 --- !u!65 &661788784
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17156,7 +17156,7 @@ MonoBehaviour:
   _dialogueCanvas: {fileID: 669277951}
   _textName: {fileID: 1834960028}
   _textSentence: {fileID: 379282199}
-  typingSpeed: 0.03
+  typingSpeed: 0.04
   budClip: {fileID: 8300000, guid: 3f0a36a702fca5c4eb01de511acfa914, type: 3}
 --- !u!114 &669277953
 MonoBehaviour:
@@ -21210,7 +21210,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _npcName: Sr. Semente, o Fazendeiro
   dialogue: {fileID: 11400000, guid: 33a8b9f6372e9004eb60231aad80c3c3, type: 2}
-  _voice: {fileID: 0}
+  _voice: {fileID: 8300000, guid: 77ffaad51f7b2ad41b89b63bf95d36e8, type: 3}
 --- !u!1001 &799769114
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30511,7 +30511,7 @@ MonoBehaviour:
   _quest: {fileID: 11400000, guid: dbeef488a647c04459462503ee21f6c7, type: 2}
   _animator: {fileID: 1179782342}
   _walker: {fileID: 0}
-  _voice: {fileID: 0}
+  _voice: {fileID: 8300000, guid: 83b3f2787dcc610409dc6c26a8462e82, type: 3}
 --- !u!65 &1179782344
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35329,7 +35329,7 @@ Transform:
   m_GameObject: {fileID: 1401832950}
   serializedVersion: 2
   m_LocalRotation: {x: 0.081391595, y: -2.9592614e-22, z: 5.3485015e-23, w: 0.9966822}
-  m_LocalPosition: {x: -248.3, y: 8.488191, z: 46.46074}
+  m_LocalPosition: {x: 74.98, y: 2.2021909, z: 93.37074}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -38149,7 +38149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _npcName: Papa
   dialogue: {fileID: 11400000, guid: c5512167fd22d7e418738a5e9c4b1a0b, type: 2}
-  _voice: {fileID: 0}
+  _voice: {fileID: 8300000, guid: 56ebbd4a807e4b349803865ab5a0107f, type: 3}
 --- !u!114 &1533156159
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40791,6 +40791,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 243d90fcc8fe2634ea64eed1679c7947, type: 3}
       propertyPath: m_Name
       value: Male_Suit
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 243d90fcc8fe2634ea64eed1679c7947, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -43612,6 +43616,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Adriana
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b9e4ae0362dd1a64da9d6db7baa12a19, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -43690,7 +43698,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _npcName: Adriana
   dialogue: {fileID: 11400000, guid: 466a9e2e274e0f742934db5f73972370, type: 2}
-  _voice: {fileID: 0}
+  _voice: {fileID: 8300000, guid: 83b3f2787dcc610409dc6c26a8462e82, type: 3}
 --- !u!65 &1761174516
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -52319,15 +52327,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b0eb910fbe483f045b3d3ab2992907bd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -248.3
+      value: 74.98
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b0eb910fbe483f045b3d3ab2992907bd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.9
+      value: -0.386
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b0eb910fbe483f045b3d3ab2992907bd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 56.12
+      value: 103.03
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b0eb910fbe483f045b3d3ab2992907bd, type: 3}
       propertyPath: m_LocalRotation.w

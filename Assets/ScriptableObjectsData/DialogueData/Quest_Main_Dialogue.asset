@@ -45,3 +45,6 @@ MonoBehaviour:
   - speaker: 0
     text: "Ah \xE9! Pra come\xE7ar, acho que voc\xEA poderia falar com a Roberta
       em O\xE1sis, siga o caminho por tr\xE1s dos laborat\xF3rios. Good luck!"
+  - speaker: 0
+    text: Assim que conseguir os itens que eu preciso, me encontre no extrator3000.
+      See you!

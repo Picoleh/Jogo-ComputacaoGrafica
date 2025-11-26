@@ -2388,7 +2388,7 @@ MonoBehaviour:
   ambientClips:
   - {fileID: 8300000, guid: 4af55e6e9cf98874fa4bab0dd9668ab7, type: 3}
   - {fileID: 8300000, guid: cc4c30eb3af9050439bb2a59b5ef2625, type: 3}
-  easterEggSong: {fileID: 8300000, guid: 6216efe4c55ad0e47a96e31aac8ec633, type: 3}
+  easterEggSong: {fileID: 8300000, guid: 8c20d2564db48a7498aff83def282e04, type: 3}
 --- !u!114 &720387841
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -49,7 +49,7 @@ public class SlideManager : MonoBehaviour
 
         // Mostra diálogo
         yield return new WaitForSeconds(1f);
-        DialogueSystem.instance.StartDialogue("Tonclay", slideInfo.lines, tonclayVoice);
+        DialogueSystem.instance.StartDialogue("???", slideInfo.lines, tonclayVoice);
         DialogueSystem.instance.OnDialogueEnd += NextSlide;
     }
 
