@@ -1,17 +1,40 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
+
+public enum NotificationIcon {
+    Add,
+    Complete,
+    Interacted,
+    Activated
+}
+
+public class Notification {
+    public string message;
+    public NotificationIcon icon;
+
+    public Notification(string message, NotificationIcon icon) {
+        this.message = message;
+        this.icon = icon;
+    }
+}
 
 public class NotificationManager : MonoBehaviour
 {
     public static NotificationManager instance { get; private set; }
     [SerializeField] private CanvasGroup _notificationCanvas;
     [SerializeField] private TextMeshProUGUI _notificationText;
+    [SerializeField] private Image _icon;
     [SerializeField] private float fadeDuration = 0.5f;
     [SerializeField] private float displayTime = 2f;
+    [Header("Mesma ordem enum")]
+    [SerializeField] private List<Sprite> iconsImages = new List<Sprite>();
 
-    private Queue<string> notificationQueue = new();
+    private Queue<Notification> notificationQueue = new();
     private bool isShowing = false;
     private void Awake() {
         if (instance != null && instance != this) {
@@ -23,21 +46,24 @@ public class NotificationManager : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    public void ShowNotification(string message) {
+    public void ShowNotification(string message, NotificationIcon icon) {
         gameObject.SetActive(true);
-        notificationQueue.Enqueue(message);
-
+        notificationQueue.Enqueue(new Notification(message, icon));
         // Se nenhuma notificação está sendo exibida, processa
         if (!isShowing)
             StartCoroutine(ProcessQueue());
+    }
+
+    private Sprite GetIconByEnum(NotificationIcon icon) {
+        return iconsImages[(int)icon];
     }
 
     private IEnumerator ProcessQueue() {
         isShowing = true;
         Debug.Log("Processando");
         while (notificationQueue.Count > 0) {
-            string msg = notificationQueue.Dequeue();
-            yield return StartCoroutine(FadeRoutine(msg));
+            Notification n = notificationQueue.Dequeue();
+            yield return StartCoroutine(FadeRoutine(n));
         }
 
         isShowing = false;
@@ -45,8 +71,9 @@ public class NotificationManager : MonoBehaviour
         Debug.Log("Processado");
     }
 
-    private IEnumerator FadeRoutine(string message) {
-        _notificationText.text = message;
+    private IEnumerator FadeRoutine(Notification n) {
+        _notificationText.text = n.message;
+        _icon.sprite = GetIconByEnum(n.icon);
         gameObject.SetActive(true);
 
         // FADE IN

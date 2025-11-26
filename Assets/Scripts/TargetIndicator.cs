@@ -12,7 +12,10 @@ public class TargetIndicator : MonoBehaviour, IInteractable {
     public string interactionPrompt => string.IsNullOrEmpty(prompt) ? "Interagir" : prompt;
 
     public void Interact(Interactor interactor) {
-        NotificationManager.instance.ShowNotification(string.IsNullOrEmpty(targetInteractedNotification) ? "Interagido" : targetInteractedNotification);
+        NotificationManager.instance.ShowNotification(
+            string.IsNullOrEmpty(targetInteractedNotification) ? "Interagido" : targetInteractedNotification,
+            NotificationIcon.Interacted
+        );
         if(spawnAtTarget != null)
             GameObject.Instantiate(spawnAtTarget, transform.position, Quaternion.identity);
 

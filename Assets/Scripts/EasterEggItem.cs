@@ -9,7 +9,7 @@ public class EasterEggItem : MonoBehaviour, IInteractable {
     public void Interact(Interactor interactor) {
         if (!interacted) {
             active++;
-            NotificationManager.instance.ShowNotification("Ativado (" + active.ToString() + "/3)");
+            NotificationManager.instance.ShowNotification("Ativado (" + active.ToString() + "/3)", NotificationIcon.Activated);
             interacted = true;
             CheckEasterEgg();
         }

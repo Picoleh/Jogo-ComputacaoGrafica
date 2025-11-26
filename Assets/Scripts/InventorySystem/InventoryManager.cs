@@ -65,7 +65,7 @@ public class InventoryManager : MonoBehaviour, ISaveable
         foreach (var slot in itensSlots) {
             if (slot.IsEmpty) {
                 slot.SetItem(item);
-                NotificationManager.instance.ShowNotification("Novo Item:\nAperte TAB para ver");
+                NotificationManager.instance.ShowNotification("Novo Item:\nAperte TAB para ver", NotificationIcon.Add);
                 return;
             }
         }
@@ -96,7 +96,7 @@ public class InventoryManager : MonoBehaviour, ISaveable
         foreach(var slot in questSlots) {
             if (slot.IsEmpty) { 
                 slot.SetQuest(quest);
-                NotificationManager.instance.ShowNotification("Nova Quest:\nAperte TAB para ver");
+                NotificationManager.instance.ShowNotification("Nova Quest:\nAperte TAB para ver", NotificationIcon.Add);
                 return;
             }
         }
