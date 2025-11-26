@@ -2379,16 +2379,17 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d5748861163afb646abfcff99ffad093, type: 3}
   loopClips:
   - {fileID: 8300000, guid: 8ebdd424b03fbf741b4621b4fcd5e2fe, type: 3}
-  - {fileID: 8300000, guid: afa990dd213028e439be2a34acebc162, type: 3}
+  - {fileID: 8300000, guid: 1a79dffa194b2504091c7c884ca6313a, type: 3}
   musicClips:
-  - {fileID: 8300000, guid: ca2669879f2696a44adb0abc1fb72696, type: 3}
-  - {fileID: 8300000, guid: 404a82b2c8761774f96a26d8ea668279, type: 3}
-  - {fileID: 8300000, guid: 9be588f4184688944b928d05c1b3458a, type: 3}
-  - {fileID: 8300000, guid: f5c49a3f2246de145af3aa90c4cb074d, type: 3}
+  - {fileID: 8300000, guid: a18d1cb730f7c9b4dae50380beeac023, type: 3}
+  - {fileID: 8300000, guid: 41888a77e14a1154ea7b0c48320b1ec3, type: 3}
+  - {fileID: 8300000, guid: 3123df0b21964b54a9000e11e1138647, type: 3}
+  - {fileID: 8300000, guid: 1ce715dd031a72240a2621ebff37086d, type: 3}
   ambientClips:
   - {fileID: 8300000, guid: 4af55e6e9cf98874fa4bab0dd9668ab7, type: 3}
   - {fileID: 8300000, guid: cc4c30eb3af9050439bb2a59b5ef2625, type: 3}
   easterEggSong: {fileID: 8300000, guid: 8c20d2564db48a7498aff83def282e04, type: 3}
+  menuSong: {fileID: 8300000, guid: 54f3678e05fea364e961c99239e9b3ad, type: 3}
 --- !u!114 &720387841
 MonoBehaviour:
   m_ObjectHideFlags: 0

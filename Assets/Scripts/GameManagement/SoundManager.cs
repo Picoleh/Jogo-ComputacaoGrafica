@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 
 
 public class SoundManager : MonoBehaviour
@@ -21,6 +22,7 @@ public class SoundManager : MonoBehaviour
     [SerializeField] private List<AudioClip> musicClips;
     [SerializeField] private List<AudioClip> ambientClips;
     [SerializeField] private AudioClip easterEggSong;
+    [SerializeField] private AudioClip menuSong;
 
     private AudioClip lastMusic;
     private AudioClip lastAmbient;
@@ -42,12 +44,13 @@ public class SoundManager : MonoBehaviour
     }
 
     private void Start() {
-        PlayMusic();
         StartCoroutine(FadeIn(musicSource, musicVolume));
+        SceneManager.activeSceneChanged += ChangeMusicBehavior;
+        PlayMenuMusic();
     }
 
     private void Update() {
-        if (musicSource.isPlaying) {
+        if (musicSource.isPlaying && musicSource.loop == false) {
             if (Mathf.RoundToInt(musicSource.clip.length) - Mathf.RoundToInt(musicSource.time) < fadeTime) {
                 if (!isFading) {
                     StartCoroutine(FadeOut(musicSource));
@@ -65,6 +68,21 @@ public class SoundManager : MonoBehaviour
                 }
             }
         }   
+    }
+
+    private void ChangeMusicBehavior(Scene arg0, Scene arg1) {
+        string scene = SceneManager.GetActiveScene().name;
+        if (scene == "MainMenu") {
+            PlayMenuMusic();
+        }
+        else if (scene == "Intro") {
+            musicSource.Stop();
+        }
+        else {
+            musicSource.loop = false;
+            musicSource.Stop();
+            PlayAmbientSound();
+        }
     }
 
     private void PlayAmbientSound() {
@@ -90,6 +108,14 @@ public class SoundManager : MonoBehaviour
 
         lastMusic = musicClips[r];
         musicSource.clip = musicClips[r];
+
+        musicSource.Play();
+    }
+
+    private void PlayMenuMusic() {
+        ambientSource.Stop();
+        musicSource.clip = menuSong;
+        musicSource.loop = true;
         musicSource.Play();
     }
 

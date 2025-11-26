@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f6a420a48fc96e428a402a5ca8a3fb8, type: 3}
+  m_Name: Rafael_Dialogue
+  m_EditorClassIdentifier: 
+  lines:
+  - speaker: 0
+    text: "Desde que a Cisco se foi, n\xE3o sei mais o que fazer..."
+  - speaker: 0
+    text: "Ah, oi rob\xF4! Voc\xEA est\xE1 me parecendo meio col\xE9rico, est\xE1
+      em uma grande miss\xE3o?"
+  - speaker: 1
+    text: "(Sons de rob\xF4)"
+  - speaker: 0
+    text: "Pois saiba que te considero como um filho ent\xE3o!"

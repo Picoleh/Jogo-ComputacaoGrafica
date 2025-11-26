@@ -81,7 +81,7 @@ public class PlayerMovement : MonoBehaviour, ISaveable{
 
         animator.SetFloat("Speed", currentSpeed);
         if(currentSpeed > maxMoveSpeed + 2f) {
-            SoundManager.instance.PlayLoop("RoboCorrendo");
+            SoundManager.instance.PlayLoop("RoboCorrendo-Volumed");
         }
         else if(currentSpeed > 1.0f) {
             SoundManager.instance.PlayLoop("RoboAndando");
