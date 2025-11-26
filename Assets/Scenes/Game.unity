@@ -17170,7 +17170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _npcName: SUP
   dialogue: {fileID: 11400000, guid: 652e3987ae3d0154ca461ab88f0d466e, type: 2}
-  _voice: {fileID: 8300000, guid: 77ffaad51f7b2ad41b89b63bf95d36e8, type: 3}
+  _voice: {fileID: 8300000, guid: 8b2a79499dc1a2c49915aeda3cf49fdc, type: 3}
 --- !u!65 &661788784
 BoxCollider:
   m_ObjectHideFlags: 0
