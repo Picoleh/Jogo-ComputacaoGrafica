@@ -40,10 +40,10 @@ public class Interactor : MonoBehaviour{
                 if (interactable is not NPC) {
                     SoundManager.instance.PlaySFX("SomRobo4");
                 }
-                else if(interactable is Item) {
+                if(interactable is Item) {
                     animator.SetTrigger("Interact");
                 }
-                    interactable.Interact(this);
+                interactable.Interact(this);
             }
         }
     }

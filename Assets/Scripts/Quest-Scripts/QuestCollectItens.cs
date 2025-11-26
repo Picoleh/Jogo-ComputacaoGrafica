@@ -41,7 +41,7 @@ public class QuestCollectItens : QuestBase {
 
     public override void RedoQuest() {
         foreach (var item in _itensToCollect) {
-            if(InventoryManager.instance.HasItem(item))
+            if(prefabs.Count > 0 && InventoryManager.instance.HasItem(item))
                 InventoryManager.instance.RemoveItem(item);
         }
         StartQuest();

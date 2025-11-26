@@ -57,7 +57,7 @@ public class NPC : MonoBehaviour, IInteractable, ISaveable{
                 transform.Rotate(0f, 56.25f, 0f);
             }
 
-            else if(!_quest._completed)
+            if(!_quest._completed)
                 _quest.RedoQuest();
         }
     }
