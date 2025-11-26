@@ -18746,9 +18746,6 @@ MonoBehaviour:
   displayTime: 2
   iconsImages:
   - {fileID: 21300000, guid: 12f512c1e186d664493323c449f9e3b9, type: 3}
-  - {fileID: 21300000, guid: 0415b0fd9c3f52e44b354256f9722d9d, type: 3}
-  - {fileID: 21300000, guid: 159c84d7898711944a0b50c438ab9680, type: 3}
-  - {fileID: 21300000, guid: 3a032eb1a9aa38d4385879371b84d3e9, type: 3}
 --- !u!114 &716780181
 MonoBehaviour:
   m_ObjectHideFlags: 0

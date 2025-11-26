@@ -65,5 +65,7 @@ public class MainMenu : MenuBase
         batteryManager.Reset();
         if(SaveSystem.GameFileExists())
             loadGameButton.interactable = true;
+
+        EasterEggItem.active = 0;
     }
 }

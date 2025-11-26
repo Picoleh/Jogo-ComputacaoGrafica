@@ -54,7 +54,7 @@ public class NPC : MonoBehaviour, IInteractable, ISaveable{
         if (!_firstInteraction) {
             if(_npcName == "Tonclay") {
                 transform.position = new Vector3(48f, 0f, -33.75f);
-                transform.Rotate(0f, 56.25f, 0f);
+                transform.Rotate(0f, 180f, 0f);
             }
 
             if(!_quest._completed)

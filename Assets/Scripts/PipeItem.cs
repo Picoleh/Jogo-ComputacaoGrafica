@@ -4,7 +4,7 @@ public class PipeItem : MonoBehaviour
 {
     private float speed = 3.0f;
     private float rotationSpeed = 100f;
-    private float maxHeight = 70f;
+    private float maxHeight = 100f;
 
     private void Update() {
         transform.position += Vector3.up * speed * Time.deltaTime;
