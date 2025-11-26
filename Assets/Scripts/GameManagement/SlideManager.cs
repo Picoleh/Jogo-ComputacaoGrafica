@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.Splines;
 using UnityEngine.UI;
@@ -19,6 +20,7 @@ public class SlideManager : MonoBehaviour
         if (SaveManager.instance == null)
             SceneManager.LoadScene("MainMenu");
 
+        Cursor.lockState = CursorLockMode.Locked;
         StartCoroutine(StartIntroRoutine());
     }
 

@@ -14,7 +14,7 @@ public class TargetIndicator : MonoBehaviour, IInteractable {
     public void Interact(Interactor interactor) {
         NotificationManager.instance.ShowNotification(
             string.IsNullOrEmpty(targetInteractedNotification) ? "Interagido" : targetInteractedNotification,
-            NotificationIcon.Interacted
+            NotificationIcon.Add
         );
         if(spawnAtTarget != null)
             GameObject.Instantiate(spawnAtTarget, transform.position, Quaternion.identity);

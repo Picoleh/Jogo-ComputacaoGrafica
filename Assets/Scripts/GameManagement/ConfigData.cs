@@ -9,4 +9,12 @@ public class ConfigData{
         volumesData = volumes;
         this.qualityData = qualityData;
     }
+
+
+    public static ConfigData Default() {
+        return new ConfigData(
+                new VolumesData(70f, 70f, 70f),
+                new QualityData(3)
+            );
+    }
 }

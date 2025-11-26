@@ -57,7 +57,7 @@ public abstract class QuestBase : ScriptableObject{
     }
 
     public void ShowSucessNotification() {
-        NotificationManager.instance.ShowNotification("Quest Completa", NotificationIcon.Complete);
+        NotificationManager.instance.ShowNotification("Quest Completa", NotificationIcon.Add);
         DialogueSystem.instance.OnDialogueEnd -= ShowSucessNotification;
     }
 

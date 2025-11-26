@@ -30,10 +30,14 @@ public class SaveSystem{
     public static ConfigData LoadConfigSave() {
         if (!File.Exists(configSavePath)) {
             Debug.LogWarning("Config Save file not found at " + configSavePath);
-            return default;
+            return ConfigData.Default();
         }
 
         string json = File.ReadAllText(configSavePath);
         return JsonUtility.FromJson<ConfigData>(json);
+    }
+
+    public static bool GameFileExists() {
+        return File.Exists(gameSavePath);
     }
 }

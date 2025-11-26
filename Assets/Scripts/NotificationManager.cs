@@ -7,10 +7,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public enum NotificationIcon {
-    Add,
-    Complete,
-    Interacted,
-    Activated
+    Add
 }
 
 public class Notification {

@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class MainMenu : MenuBase
 {
     [SerializeField] Button settingsButton;
+    [SerializeField] Button loadGameButton;
     [SerializeField] Button creditsButton;
     [SerializeField] BatteryManager batteryManager;
 
@@ -15,6 +16,7 @@ public class MainMenu : MenuBase
     private void Awake() {
         settingsButton.onClick.AddListener(OnSettingsClick);
         creditsButton.onClick.AddListener(OnCreditsClick);
+        loadGameButton.interactable = false;
     }
 
     public void OnNewGame() {
@@ -61,5 +63,7 @@ public class MainMenu : MenuBase
     public override void OpenMenu() {
         base.OpenMenu();
         batteryManager.Reset();
+        if(SaveSystem.GameFileExists())
+            loadGameButton.interactable = true;
     }
 }
